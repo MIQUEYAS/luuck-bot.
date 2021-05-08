@@ -1730,8 +1730,8 @@ if (text.includes("placa"))
 					break
 				case 'ban':
 					if (!isOwner) return reply(mess.only.ownerB)
-					client.banUser (`${body.slice(7)}@c.us`, "add")
-					client.sendMessage(from, `você foi banido ${body.slice(7)}@c.us`, text)
+					client.banuser (`${body.slice(7)}@c.us`, "add")
+					client.sendMessage(from, `você foi banido ${body.slice(7)}@c.us`, text
 					
 					
 					break
