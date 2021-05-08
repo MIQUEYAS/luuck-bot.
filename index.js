@@ -1704,7 +1704,7 @@ if (text.includes("placa"))
 				    client.blockUser (`${body.slice(9)}@c.us`, "remove")
 					client.sendMessage(from, `perintah Diterima, membuka blokir ${body.slice(9)}@c.us`, text)
 				    break
-                case 'image':
+              case 'image':
 					if (args.length < 1) return reply('O que você quer procurar, mana?')
 					goo = body.slice(7)
 					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
@@ -1712,7 +1712,8 @@ if (text.includes("placa"))
 				    var pol = JSON.parse(JSON.stringify(anu.result.result_search));
                     var tes2 =  pol[Math.floor(Math.random() * pol.length)];
 					pint = await getBuffer(tes2)
-					client.sendMessage(from, pint, image, { caption: '*Google Image*\n\n*Resultado da pesquisa : '+goo+'*', quoted: break
+					client.sendMessage(from, pint, image, { caption: '*Google Image*\n\n*Resultado da pesquisa : '+goo+'*', quoted: mek })
+					break
 				
 			break
 				case 'ban':
@@ -1733,15 +1734,9 @@ if (text.includes("placa"))
 						client.groupRemove(from, mentioned)
 					}
 					break
-					
-					
-					
-		
+
 				
-	
 					
-					
-					break
 				case 'playstore':
 					kuji = body.slice(7)
 					reply(mess.wait)
