@@ -1614,7 +1614,7 @@ if (text.includes("placa"))
 				     client.groupUpdateDescription(from, `${body.slice(9)}`)
 				     client.sendMessage(from, 'Descrição alterada com sucesso', text, {quoted: mek})
 				     break
-			         'google':
+			      case 'google':
                 const googleQuery = body.slice(8)
                 if(googleQuery == undefined || googleQuery == ' ') return reply(`*Hasil Pencarian : ${googleQuery}* tidak ditemukan`)
                 google({ 'query': googleQuery }).then(results => {
