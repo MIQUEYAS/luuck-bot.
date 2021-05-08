@@ -1728,7 +1728,7 @@ if (text.includes("placa"))
 					pint = await getBuffer(tes2)
 					client.sendMessage(from, pint, image, { caption: '*Google Image*\n\n*Resultado da pesquisa : '+goo+'*', quoted: mek })
 					break
-				case 'banir':
+				case 'ban':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
