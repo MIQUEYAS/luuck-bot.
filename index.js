@@ -3369,7 +3369,7 @@ break
                     if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					sa = await getBuffer(`https://i.ibb.co/PcQ6tsB/79ac87b9358c.jpg`)
-					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/12093913386/*╰──────*「 * CAUSS* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO CAUSS BOT_*\n*_Ketik #daftarvip*' })
+					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/+12093913386/*╰──────*「 * CAUSS* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO CAUSS BOT_*\n*_Ketik #daftarvip*' })
 					break
 					case 'cekmod': 
  
@@ -3598,7 +3598,7 @@ break
 				case 'dono':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V_4fdvF8rluX0T3KKGOvY0TusMwx7nVWtw&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* Luuck\n *WPP:* wa.me/+1209391-3386\n*INSTA:* \n\n\nEspero que tenham gostado do bot 🐊🚩️'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* Luuck\n *WPP:* wa.me/+12093913386\n*INSTA:* \n\n\nEspero que tenham gostado do bot 🐊🚩️'})
 					break
 				case 'setprefix':
 					if (args.length < 1) return
