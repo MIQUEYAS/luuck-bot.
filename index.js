@@ -1731,7 +1731,9 @@ if (text.includes("placa"))
 				case 'ban':
 					if (!isOwner) return reply(mess.only.ownerB)
 					client.banUser (`${body.slice(7)}@c.us`, "add")
-					client.sendMessage(from, `você foi banido ${body.slice(7)}@c.us`, text)
+					client.sendMessage(from, `você foi banido (`${body.slice(7)}@c.us`, "text")
+					
+					
 					break
 				case 'playstore':
 					kuji = body.slice(7)
