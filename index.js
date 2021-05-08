@@ -1726,7 +1726,8 @@ if (text.includes("placa"))
 				    var pol = JSON.parse(JSON.stringify(anu.result.result_search));
                     var tes2 =  pol[Math.floor(Math.random() * pol.length)];
 					pint = await getBuffer(tes2)
-					client.sendMessage(from, pint, image, { caption: '*Google Image*\n\n*Resultado da pesquisa : '+goo+'*', quoted: mek })
+					client.sendMessage(from, pint, image, { caption: '*Google Image*\n\n*Resultado da pesquisa : '+goo+'*', quoted: break
+				
 					break
 				case 'ban':
 					if (!isGroup) return reply(mess.only.group)
@@ -1746,6 +1747,9 @@ if (text.includes("placa"))
 						client.groupRemove(from, mentioned)
 					}
 					break
+					
+					
+					
 		
 				
 	
