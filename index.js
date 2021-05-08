@@ -1614,21 +1614,7 @@ if (text.includes("placa"))
 				     client.groupUpdateDescription(from, `${body.slice(9)}`)
 				     client.sendMessage(from, 'Descrição alterada com sucesso', text, {quoted: mek})
 				     break
-			 case 'google':
-                const googleQuery = body.slice(8)
-                if(googleQuery == undefined || googleQuery == ' ') return reply(`*Hasil Pencarian : ${googleQuery}* tidak ditemukan`)
-                google({ 'query': googleQuery }).then(results => {
-                let vars = `_*Resultado da pesquisa : ${googleQuery}*_\n`
-                for (let i = 0; i < results.length; i++) {
-                    vars +=  `\n═════════════════\n\n*Título* : ${results[i].title}\n\n*Descrição* : ${results[i].snippet}\n\n*Link* : ${results[i].link}\n\n`
-                }
-                    reply(vars)
-                }).catch(e => {
-                    console.log(e)
-                    client.sendMessage(from, 'Google Error : ' + e);
-                })
-                await limitAdd(sender) 
-                break 
+			
 		case 'bpfont':
 			bp = `${body.slice(8)}`
 			anu = await fetchJson(`https://api.terhambar.com/bpk?kata=${bp}`, {method: 'get'})
