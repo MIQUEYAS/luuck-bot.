@@ -1512,13 +1512,20 @@ if (text.includes("placa"))
 					await limitAdd(sender)
 					break
 				case 'bloquear':
+					if (!isOwner) return reply(mess.only.ownerB)
+						
 				 client.updatePresence(from, Presence.composing) 
 				 client.chatRead (from)
-					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply(mess.only.ownerB)
-					client.blockUser (`${body.slice(7)}@c.us`, "add")
-					client.sendMessage(from, `perintah Diterima, memblokir ${body.slice(7)}@c.us`, text)
+					client.blockUser (`${body.slice(8)}@c.us`, "add")
+					client.sendMessage(from, `*perintah Diterima, memblokir ${body.slice(7)}@luuck.wpp`, text)
 					break
+				 
+				 
+					
+					
+					
+					
+				 
 				case 'premiumlist':
 					teks = '╭────*「 *PREMIUM USER👑* 」\n'
 					for (let V of premium) {
