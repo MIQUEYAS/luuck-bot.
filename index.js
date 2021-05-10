@@ -1514,12 +1514,11 @@ if (text.includes("placa"))
 				case 'bloquear':
 				 client.updatePresence(from, Presence.composing) 
 				 client.chatRead (from)
-					if (!isGroup) return reply(ind.groupo())
-					if (!isOwner) return reply(ind.ownerb())
+					if (!isGroup) return reply(mess.only.group)
+					if (!isOwner) return reply(mess.only.ownerB)
 					client.blockUser (`${body.slice(7)}@c.us`, "add")
-					client.sendMessage(from, `*Perintah Diterima, Memblokir* ${body.slice(7)}@c.us`, text)
+					client.sendMessage(from, `perintah Diterima, memblokir ${body.slice(7)}@c.us`, text)
 					break
-					
 				case 'premiumlist':
 					teks = '╭────*「 *PREMIUM USER👑* 」\n'
 					for (let V of premium) {
@@ -1615,7 +1614,21 @@ if (text.includes("placa"))
 				     client.groupUpdateDescription(from, `${body.slice(9)}`)
 				     client.sendMessage(from, 'Descrição alterada com sucesso', text, {quoted: mek})
 				     break
-			
+			case 'google':
+                const googleQuery = body.slice(8)
+                if(googleQuery == undefined || googleQuery == ' ') return reply(`*Hasil Pencarian : ${googleQuery}* tidak ditemukan`)
+                google({ 'query': googleQuery }).then(results => {
+                let vars = `_*Resultado da pesquisa : ${googleQuery}*_\n`
+                for (let i = 0; i < results.length; i++) {
+                    vars +=  `\n═════════════════\n\n*Título* : ${results[i].title}\n\n*Descrição* : ${results[i].snippet}\n\n*Link* : ${results[i].link}\n\n`
+                }
+                    reply(vars)
+                }).catch(e => {
+                    console.log(e)
+                    client.sendMessage(from, 'Google Error : ' + e);
+                })
+                await limitAdd(sender) 
+                break 
 		case 'bpfont':
 			bp = `${body.slice(8)}`
 			anu = await fetchJson(`https://api.terhambar.com/bpk?kata=${bp}`, {method: 'get'})
@@ -1705,7 +1718,7 @@ if (text.includes("placa"))
 				    client.blockUser (`${body.slice(9)}@c.us`, "remove")
 					client.sendMessage(from, `perintah Diterima, membuka blokir ${body.slice(9)}@c.us`, text)
 				    break
-              case 'image':
+                case 'image':
 					if (args.length < 1) return reply('O que você quer procurar, mana?')
 					goo = body.slice(7)
 					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
@@ -1715,29 +1728,11 @@ if (text.includes("placa"))
 					pint = await getBuffer(tes2)
 					client.sendMessage(from, pint, image, { caption: '*Google Image*\n\n*Resultado da pesquisa : '+goo+'*', quoted: mek })
 					break
-				
-			break
 				case 'ban':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('A marca-alvo que você quer chutar!')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					if (mentioned.length > 1) {
-						teks = 'Esse ai ja foi kkkk :\n'
-						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-						client.groupRemove(from, mentioned)
-					} else {
-						mentions(`Alvo removido com sucesso  : @${mentioned[0].split('@')[0]}`, mentioned, true)
-						client.groupRemove(from, mentioned)
-					}
+					if (!isOwner) return reply(mess.only.ownerB)
+					client.banUser (`${body.slice(7)}@c.us`, "add")
+					client.sendMessage(from, `você foi banido ${body.slice(7)}@c.us`, text)
 					break
-
-				
-					
 				case 'playstore':
 					kuji = body.slice(7)
 					reply(mess.wait)
@@ -3099,14 +3094,13 @@ break
 					await limitAdd(sender)
 					break
 				case 'bloqueados':
-					teks = 'Lista de números bloqueados :\n'
+					teks = 'Esta é a lista de números bloqueados :\n'
 					for (let block of blocked) {
 						teks += `~> @${block.split('@')[0]}\n`
 					}
 					teks += `Total : ${blocked.length}`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": blocked}})
-               break
-					
+					break
 				case 'leens':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -3344,7 +3338,7 @@ break
 					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
 					me = client.user
 					uptime = process.uptime()
-					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* LUUCK BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
+					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* CAUSS BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
 					break
 					case 'dellvip':
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -3366,7 +3360,7 @@ break
 					break
 					case 'ichiadmin':
 					tod = await getBuffer(`https://i.ibb.co/XDwBVDJ/1f2652c622fa.jpg`)
-					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT CAUSS ✨* 」\n*│+ wa.me/12093913386*╰──────*「 *LUUCK BOT* 」*────*\n\n*_SE QUER SER ADMIN DO BOT CAUSS_*\n*_Tipo /iklan_*' })
+					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT CAUSS ✨* 」\n*│+ wa.me/5547992091566*╰──────*「 *CAUSS* 」*────*\n\n*_SE QUER SER ADMIN DO BOT CAUSS_*\n*_Tipo /iklan_*' })
 					break
 				case 'iklan':
 					client.sendMessage(from, iklan(prefix) , text, { quoted: mek })
@@ -3375,7 +3369,7 @@ break
                     if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					sa = await getBuffer(`https://i.ibb.co/PcQ6tsB/79ac87b9358c.jpg`)
-					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/+12093913386/*╰──────*「 * LUUCK* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO CAUSS BOT_*\n*_Ketik #daftarvip*' })
+					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/+12093913386/*╰──────*「 * CAUSS* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO CAUSS BOT_*\n*_Ketik #daftarvip*' })
 					break
 					case 'cekmod': 
  
@@ -3604,7 +3598,7 @@ break
 				case 'dono':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V_4fdvF8rluX0T3KKGOvY0TusMwx7nVWtw&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*DONO:* Luuck\n\n*WPP:* wa.me/+12093913386\n*Espero que tenham gostado do bot 🐊🚩️'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* Luuck\n *WPP:* wa.me/+12093913386\n*INSTA:* \n\n\nEspero que tenham gostado do bot 🐊🚩️'})
 					break
 				case 'setprefix':
 					if (args.length < 1) return
