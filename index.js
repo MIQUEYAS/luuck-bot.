@@ -1,3 +1,9 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+//Reprodução, edição e outros estão autorizados MAS SEM REMOVER MEUS CRÉDITOS.
+//Caso remova, resulta na quebra da licença do mesmo, o que é um crime federal.
+//Leia mais em http://escolhaumalicenca.com.br/licencas/mit/ ou no comando /termos.
+// 
 const {
     WAConnection,
     MessageType,
@@ -51,19 +57,19 @@ const { limit } = require('./database/menu/limit*/
 const apivhtear = 'apivhtear';
 const apibarbar = 'apibarbar';
 const tobzkey = 'apitobz';
-const BotName = 'Luuck Bot'; 
+const BotName = 'XandãoBot'; 
 const instagram = 'http://www.instagram.com/'; 
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:Luuck\n' // Nama kamu
+            + 'FN:Causs⚡\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=554792091566:+55 47992091566\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=5547992091566:+55 47 992091566\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '.','!','#'
+prefix = '/' 
 blocked = []
 limitawal = '999999999'
-cr = '*Luuck*'
+cr = '*Causs*'
 
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
@@ -203,10 +209,10 @@ async function starts() {
 
 	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
 	client.on('connecting', () => {
-		start('2', 'Quase la...')
+		start('2', 'Falta bem poquinho, bem poquinho msm...')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado leke')
+		success('2', 'Conectado parça')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -223,7 +229,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo *${mdata.subject}*\n\nEspero que goste do grupo ❤️`
+				teks = `𝙴𝚊𝚎 𝚖𝚎𝚞 𝚙𝚊𝚛ç𝚊, 𝚝𝚞𝚍𝚘 𝚋𝚘𝚖? @${num.split('@')[0]}\n𝚂𝚎𝚓𝚊 𝚋𝚎𝚖 𝚟𝚒𝚗𝚍𝚘 𝚊𝚘  *${mdata.subject}*\n\n𝚂𝚎𝚓𝚊 𝚏𝚎𝚕𝚒𝚡️`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -234,7 +240,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Tchau @${num.split('@')[0]} Ja foi tarde 😂👋`
+				teks = `𝙱𝚘𝚒 𝚋𝚘𝚒 𝚋𝚘𝚒... 𝚋𝚘𝚒 𝚍𝚊 𝚌𝚊𝚛𝚊 𝚙𝚛𝚎𝚝𝚊 𝚜𝚎 𝚝𝚞 𝚏𝚘𝚒 𝚎𝚖𝚋𝚘𝚛𝚊 𝚝𝚞 𝚟𝚊𝚒 𝚜𝚎𝚗𝚝𝚊𝚛 𝚎 𝚗𝚊 𝚌𝚊𝚋𝚎ç𝚊@${num.split('@')[0]} 𝚔𝚔𝚔𝚔𝚔𝚔𝚔 😂👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -275,8 +281,8 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-					wait: '❬❗❭ Espere',
-					success: '️❬ ✔ ❭ Sucesso 🖤',
+					wait: 'Calma ae vey, ta apressado pra dar né',
+					success: '️❬ ✔ ❭ Pronto vey 🖤',
 					levelon: '❬ ✔ ❭ *leveling* *ativado*',
 					leveloff: ' ❬ X ❭  *leveling* *desativado*',
 					levelnoton: '❬ X ❭ *leveling não ativado*',
@@ -288,24 +294,25 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando só pode ser usado em grupos! ❌',
 					premium: '[❗] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
-					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD LUUCK BOT*',
+					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD CAUSS BOT*',
 					benned: 'Você para a banda, por favor, contate o proprietário para abrir sua banda',
-					ownerG: '[❗] Luuck? Este é um recurso especial para o Luuck ❌',
-					ownerB: '[❗] Luuck? Este é um recurso especial para o Luuck ❌',
-					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de LUUCK. Registre-se para fazer amizade com o bot Luuck por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Luuck|17\n\n──「 LUUCK BOT 」──`,
+					ownerG: '[❗] Causs? Este é um recurso especial para o CAUSS ❌',
+					ownerB: '[❗] Causs? Este é um recurso especial para o CAUSS ❌',
+					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo do causs. Registre-se para fazer amizade com o bot causs por meio, \n\nCommand : ${prefix}daftar nome|idade\nExemplo : ${prefix}daftar ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎|17\n\n──「 BOT CAUSS 」──`,
 					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: ' [❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["12093913386@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"12093913386@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["120939133866@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["12093913386@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["12093913386@s.whatsapp.net","12093913386@s.whatsapp.net"] 
+			const ownerNumber = ["12093913386@s.whatsapp.net","554791347623@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"12093913386@s.whatsapp.net","554791347623@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["12093913386@s.whatsapp.net","554791347623@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["12093913386@s.whatsapp.net","554791347623@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["12093913386@s.whatsapp.net","554199856977@s.whatsapp.net","554791347623@s.whatsapp.net","5511950227307@s.whatsapp.net","554792559907@s.whatsapp.net","558183064666@s.whatsapp.net","5583987871031@s.whatsapp.net","554791347623@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
+			pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
@@ -383,7 +390,7 @@ if (text.includes('cry')){
 if (text.includes("cnpj")){
 const aris = text.replace(/!cnpj /, "")
 axios.get(`https://www.receitaws.com.br/v1/cnpj/${aris}`).then((res) => {
-	conn.sendMessage(id, '[❗] ESPERE ESTOU BUSCANDO DADOS', MessageType.text)
+	conn.sendMessage(id, '𝙿𝙴𝚁𝙰 𝙰𝙴 𝚂𝙰𝙻𝙰𝙵𝚁𝙰𝙸𝙾', MessageType.text)
          let cep = `*🔍CONSULTA REALIZADA🔍* \n\n ➸ *ATIVIDADE PRINCIPAL:* ${res.data.atividade_principal[0].text} \n\n ➸ *DATA SITUAÇÃO:* ${res.data.data_situacao}\n\n ➸ *TIPO:* ${res.data.tipo} \n\n ➸ *NOME:* ${res.data.nome} \n\n ➸ *UF:* ${res.data.uf} \n\n ➸ *TELEFONE:* ${res.data.telefone}\n\n ➸ *SITUAÇÃO:* ${res.data.situacao} \n\n ➸ *BAIRRO:* ${res.data.bairro} \n\n ➸ *RUA:* ${res.data.logradouro} \n\n ➸ *NÚMERO :* ${res.data.numero} \n\n ➸ *CEP :* ${res.data.cep} \n\n ➸ *MUNICÍPIO:* ${res.data.municipio} \n\n ➸ *PORTE:* ${res.data.porte}\n\n ➸ *ABERTURA:* ${res.data.abertura}\n\n ➸ *NATUREZA JURÍDICA:* ${res.data.natureza_juridica} \n\n ➸ *FANTASIA:* ${res.data.fantasia}\n\n ➸ *CNPJ:* ${res.data.cnpj}\n\n ➸ *ÚLTIMA ATUALIZAÇÃO:* ${res.data.ultima_atualizacao}\n\n ➸ *STATUS:* ${res.data.status}\n\n ➸ *COMPLEMENTO:* ${res.data.complemento}\n\n ➸ *EMAIL:* ${res.data.email}\n\n *📌BY:May Bot* `;
     conn.sendMessage(id, cep ,MessageType.text);
 }) 
@@ -392,7 +399,7 @@ axios.get(`https://www.receitaws.com.br/v1/cnpj/${aris}`).then((res) => {
 if (text.includes("cpf")){
 const aris = text.replace(/!cpf /, "")
 axios.get(`http://geradorapp.com/api/v1/cpf/generate?token=${aris}`).then((res) => {
-	conn.sendMessage(id, '[❗] ESPERE ESTOU BUSCANDO DADOS', MessageType.text)
+	conn.sendMessage(id, '𝙿𝙴𝚁𝙰 𝙰𝙴 𝚂𝙰𝙻𝙰𝙵𝚁𝙰𝙸𝙾', MessageType.text)
          let ecpf = `*🔍CONSULTA REALIZADA🔍* \n\n ➸ *CPF:* ${res.data.CPF} \n\n ➸ *NOME:* ${res.data.Nome}\n\n ➸ *MÃE:* ${res.data.NomeMae} \n\n ➸ *NASCIMENTO:* ${res.data.DataNascimento} \n\n ➸ *RUA:* ${res.data.Rua} \n\n ➸ *N°:* ${res.data.NumeroRua}\n\n ➸ *COMPLEMENTO:* ${res.data.Complemento}\n\n ➸ *BAIRRO:* ${res.data.Bairro}\n\n ➸ *CEP:* ${res.data.CEP}\n\n ➸ *UF:* ${res.data.EstadoSigla}\n\n ➸ *CIDADE:* ${res.data.Cidade}\n\n ➸ *ESTADO:* ${res.data.Estado}\n\n ➸ *PAIS:* ${res.data.Pais}  \n\n *📌BY:May Bot* `;
     conn.sendMessage(id, ecpf ,MessageType.text);
 }) 
@@ -401,7 +408,7 @@ axios.get(`http://geradorapp.com/api/v1/cpf/generate?token=${aris}`).then((res) 
 if (text.includes("geradorcpf")){
 const aris = text.replace(/!geradorcpf/, "")
 axios.get(`http://geradorapp.com/api/v1/cpf/generate?token=40849779ec68f8351995def08ff1e2fa`).then((res) => {
-	conn.sendMessage(id, '[❗] ESPERE ESTA PROCESSANDO', MessageType.text)
+	conn.sendMessage(id, '𝚃𝙾 𝙿𝚁𝙾𝙲𝙴𝚂𝚂𝙰𝙽𝙳𝙾 𝚅𝙴𝚈', MessageType.text)
          let cpf = `*🔍CPF GERADOS🔍* \n\n ➸ *CPF:* ${res.data.data.number}  \n\n *📌BY:May Bot*`;
     conn.sendMessage(id, cpf ,MessageType.text);
 })
@@ -410,7 +417,7 @@ axios.get(`http://geradorapp.com/api/v1/cpf/generate?token=40849779ec68f8351995d
 if (text.includes("cep")){
 const aris = text.replace(/!cep /, "")
 axios.get(`https://viacep.com.br/ws/${aris}/json/`).then((res) => {
-	conn.sendMessage(id, '[❗] ESPERE ESTOU BUSCANDO DADOS', MessageType.text)
+	conn.sendMessage(id, '𝙿𝙴𝚁𝙰 𝙰𝙴 𝚂𝙰𝙻𝙰𝙵𝚁𝙰𝙸𝙾', MessageType.text)
          let cep = `*🔍CONSULTA REALIZADA🔍* \n\n ➸ *CEP:* ${res.data.cep} \n\n ➸ *ENDEREÇO:* ${res.data.logradouro}\n\n ➸ *COMPLEMENTO:* ${res.data.complemento} \n\n ➸ *BAIRRO:* ${res.data.bairro} \n\n ➸ *LOCALIDADE:* ${res.data.localidade} \n\n ➸ *UF:* ${res.data.uf}\n\n ➸ *DDD:* ${res.data.ddd} \n\n *📌BY:May Bot* `;
     conn.sendMessage(id, cep ,MessageType.text);
 }) 
@@ -454,7 +461,7 @@ if (text.includes("placa"))
 		}, 1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
 		}, 0)
 	}
 	
@@ -487,7 +494,7 @@ if (text.includes("placa"))
 		}, 1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
 		}, 0)
 	}
 	
@@ -520,7 +527,7 @@ if (text.includes("placa"))
 		}, 1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
 		}, 0)
 	}
 	
@@ -553,7 +560,7 @@ if (text.includes("placa"))
 		}, 1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
 		}, 0)
 	}
 	
@@ -586,7 +593,7 @@ if (text.includes("placa"))
 		}, 1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
 		}, 0)
 	}
 	
@@ -619,7 +626,7 @@ if (text.includes("placa"))
 		}, 1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
 		}, 0)
 	}
 	
@@ -652,13 +659,195 @@ if (text.includes("placa"))
 		}, 1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("5 segundo KKKKKKKK tchau otário 😔🤙")
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
 		}, 0)
 	}
 	
 	if (messagesC.includes("fdp")){
 			client.updatePresence(from, Presence.composing)
-			reply("teu pai")
+			reply("Teu pai")
+	}
+	
+		if (messagesC.includes("corno")){
+			client.updatePresence(from, Presence.composing)
+			reply("Vsfd seu merda")
+	}
+			
+		if (messagesC.includes("Blz")){
+			client.updatePresence(from, Presence.composing)
+			reply("Aham")
+	}
+	
+		if (messagesC.includes("Lixo")){
+			client.updatePresence(from, Presence.composing)
+			reply("Teu pai")
+	}
+	
+		if (messagesC.includes("Bomdia")){
+			client.updatePresence(from, Presence.composing)
+			reply("☀️")
+	}
+	
+		if (messagesC.includes("krai")){
+			client.updatePresence(from, Presence.composing)
+			reply("hehehe")
+	}
+		
+	
+				if (messagesC.includes("lindo")){
+			client.updatePresence(from, Presence.composing)
+			reply("obgd meu amor")
+	}
+	
+				if (messagesC.includes("fcc")){
+			client.updatePresence(from, Presence.composing)
+			reply("ainda existe isso? KKKKKKKKK")
+	}
+	
+	if (messagesC.includes("sua")){
+			client.updatePresence(from, Presence.composing)
+			reply("Ou krl para com isso")
+	}
+
+	if (messagesC.includes("vdd")){
+			client.updatePresence(from, Presence.composing)
+			reply("sim")
+	}
+	if (messagesC.includes("concordo")){
+			client.updatePresence(from, Presence.composing)
+			reply("tbm concordo lind")
+	}
+	if (messagesC.includes("solteira?")){
+			client.updatePresence(from, Presence.composing)
+			reply("eu to")
+	}
+	if (messagesC.includes("trava")){
+			client.updatePresence(from, Presence.composing)
+			reply("tem travazap no gp?😨")
+	}
+	if (messagesC.includes("dor")){
+			client.updatePresence(from, Presence.composing)
+			reply("tbm")
+	}
+	if (messagesC.includes("porno")){
+			client.updatePresence(from, Presence.composing)
+			reply("n fala essas coisas q eu sou da igreja moço")
+	}
+	if (messagesC.includes("cringe")){
+			client.updatePresence(from, Presence.composing)
+			reply("vc q é cringe pora")
+	}
+	if (messagesC.includes("tiktok")){
+			client.updatePresence(from, Presence.composing)
+			reply("cringe dms")
+	}
+	if (messagesC.includes("hentai")){
+			client.updatePresence(from, Presence.composing)
+			reply("2d man?😐")
+	}
+	if (messagesC.includes("pprt")){
+			client.updatePresence(from, Presence.composing)
+			reply("pptrt")
+	}
+	if (messagesC.includes("tatakae")){
+			client.updatePresence(from, Presence.composing)
+			reply("sasageyo")
+	}
+	if (messagesC.includes("sasageyo")){
+			client.updatePresence(from, Presence.composing)
+			reply("tatakae")
+	}
+	if (messagesC.includes("sakura")){
+			client.updatePresence(from, Presence.composing)
+			reply("inútil? sakura**")
+	}
+	if (messagesC.includes("eren")){
+			client.updatePresence(from, Presence.composing)
+			reply("mikasa")
+	}
+	if (messagesC.includes("mama")){
+			client.updatePresence(from, Presence.composing)
+			reply("claro")
+	}
+
+	if (messagesC.includes("buceta")){
+			client.updatePresence(from, Presence.composing)
+			reply("ok")
+	}
+
+	if (messagesC.includes("busseta")){
+			client.updatePresence(from, Presence.composing)
+			reply("amo")
+	}
+
+	if (messagesC.includes("elvis")){
+			client.updatePresence(from, Presence.composing)
+			reply("oq vc quer com ele? se for p te comer n vai dar hj tlgd,talvez amanhã se ele estiver dboa")
+	}
+	
+			if (messagesC.includes("but")){
+			client.updatePresence(from, Presence.composing)
+			reply("é bot seu analfabeto")
+	}
+	
+				if (messagesC.includes("amor")){
+			client.updatePresence(from, Presence.composing)
+			reply("oii mb, falou cmg? 🥺")
+	}
+	
+			if (messagesC.includes("caussbot")){
+			client.updatePresence(from, Presence.composing)
+			reply("oiii")
+	}
+	
+			if (messagesC.includes("bem?")){
+			client.updatePresence(from, Presence.composing)
+			reply("to bem, vlw por perguntar 😏")
+	}
+	
+				if (messagesC.includes("!help")){
+			client.updatePresence(from, Presence.composing)
+			reply("É com . caralho")
+	}
+	
+					if (messagesC.includes("!menu")){
+			client.updatePresence(from, Presence.composing)
+			reply("É com / caralho")
+	}
+	
+					if (messagesC.includes(".menu")){
+			client.updatePresence(from, Presence.composing)
+			reply("É com / caralho")
+	}
+		
+					if (messagesC.includes("/menu")){
+			client.updatePresence(from, Presence.composing)
+			reply("Obrigado por utilizar o Causs Bot, causs agradece")
+	}
+	
+					if (messagesC.includes("#help")){
+			client.updatePresence(from, Presence.composing)
+			reply("É com / caralho")
+	}
+	
+					if (messagesC.includes("#menu")){
+			client.updatePresence(from, Presence.composing)
+			reply("É com / caralho")
+	}
+	
+			if (messagesC.includes("chato")){
+			client.updatePresence(from, Presence.composing)
+			reply("nossa 🥺")
+	}
+	
+			if (messagesC.includes("vadia")){
+			client.updatePresence(from, Presence.composing)
+			reply("ai mano, vc acha legal usar um argumento machista?")
+	}
+	
+			if (messagesC.includes("maria")){
+			client.updatePresence(from, Presence.composing)
+			reply("amo ela")
 	}
 	
 		if (messagesC.includes("corno")){
@@ -669,32 +858,132 @@ if (text.includes("placa"))
 		if (messagesC.includes("tmnc")){
 			client.updatePresence(from, Presence.composing)
 			reply("vai vc, tu ja me disse q é mo bom")
+	}				
+		if (messagesC.includes("merda")){
+			client.updatePresence(from, Presence.composing)
+			reply("e quem disse que isso e problema meu?")
+	}
+	
+		if (messagesC.includes("eae")){
+			client.updatePresence(from, Presence.composing)
+			reply("opa")
 	}
 	
 		if (messagesC.includes("vsfd")){
 			client.updatePresence(from, Presence.composing)
-			reply("bora juntos?")
+			reply("Vá tu")
 	}
-	
-		if (messagesC.includes("cadebot")){
-			client.updatePresence(from, Presence.composing)
-			reply("olha eu aqui carai")
-	}
-	
-		if (messagesC.includes("bot")){
-			client.updatePresence(from, Presence.composing)
-			reply("oi")
-	}
-	
+
 			if (messagesC.includes("bah")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/bahc.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
-	
-				if (messagesC.includes("luuck")){
+			if (messagesC.includes("ereno")){
 			client.updatePresence(from, Presence.composing)
-			tujuh = fs.readFileSync('./assets/caussf.mp3');
+			tujuh = fs.readFileSync('./assets/att.webp');
+            
+	}
+	
+			if (messagesC.includes("/menu")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/Caussdomina.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+			if (messagesC.includes("Hehehe")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/hehe.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+			if (messagesC.includes("peitaeu")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/peitaeu.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 			
+	        if (messagesC.includes("amongus")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/amungs.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+			if (messagesC.includes("necrofilia")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/joeputo.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+		    if (messagesC.includes("drogas")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/joeputo.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("pedofilia")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/joeputo.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("gore")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/joeputo.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+	
+				if (messagesC.includes("thiago")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/tigo.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+	
+				if (messagesC.includes("caua")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/caua.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+	
+				if (messagesC.includes("kaua")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/kaua.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+	
+				if (messagesC.includes("umbigo")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/piru.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("pinguim")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/pingu.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+			if (messagesC.includes("doença")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/doenca.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("xinga")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/puta.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("puta")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/puta.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("xandao")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/oibot.m4a');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("broxa")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/broxa.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+			if (messagesC.includes("brocha")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/broxa.opus');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
@@ -703,16 +992,113 @@ if (text.includes("placa"))
 			tujuh = fs.readFileSync('./assets/Dbz.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
+	
 	        if (messagesC.includes("sexo")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/Sexo.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
+		
+	        if (messagesC.includes("caua?")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/Caussbanho.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+			
+	        if (messagesC.includes("Caua?")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/Caussbanho.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+			
+	        if (messagesC.includes("Causs?")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/Caussbanho.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+				
+	        if (messagesC.includes("pq?")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/pq.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+			if (messagesC.includes("risos")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/kiko.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
 	
+					if (messagesC.includes("hylander")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/hylander.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+						if (messagesC.includes("cmflamengo")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/cmflamengo.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+						if (messagesC.includes("cmgremio")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/cmgremio.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+						if (messagesC.includes("m4")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/m4.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+						if (messagesC.includes("macaverde")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/macaverde.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+						if (messagesC.includes("kalidade")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/kalidade.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+						if (messagesC.includes("nikeb")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/nikeb.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+			if (messagesC.includes("banhodeleite")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/BanhoDeLeite.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+				if (messagesC.includes("akdoflamengo")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/akdoflamengo.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+					if (messagesC.includes("nemo")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/nemo.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+
 				if (messagesC.includes("canta")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/canto.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+			if (messagesC.includes("video")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/laranjinha.mp4');
+            client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+
 	}
 	
 					if (messagesC.includes("grita")){
@@ -720,13 +1106,40 @@ if (text.includes("placa"))
 			tujuh = fs.readFileSync('./assets/a.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
-	
-			if (messagesC.includes("bv")){
+			
+			if (messagesC.includes("gemidinho")){
 			client.updatePresence(from, Presence.composing)
-			tujuh = fs.readFileSync('./assets/bv.mp3');
+			tujuh = fs.readFileSync('./assets/fodaze.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
+			if (messagesC.includes("bv")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/joe.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+		
+			if (messagesC.includes("fds")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/anafodase.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	        if (messagesC.includes("matheus")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/math.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	} 
+	        if (messagesC.includes("everton")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/everton.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+        	if (messagesC.includes("zap caiu")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/zapcaiu.opus');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+
 				if (messagesC.includes("mandememe")){
 			client.updatePresence(from, Presence.composing)
 			data = fs.readFileSync('./src/darkjokes.js');
@@ -737,6 +1150,16 @@ if (text.includes("placa"))
                 sendImage(hasil, mek, '*GELAP BOS :V*')
 	}
 
+		if (messagesC.includes("Te amo")){
+			client.updatePresence(from, Presence.composing)
+			reply("Eu tbm")
+	}
+	
+		if (messagesC.includes("Alguem ai pra jogar?")){
+			client.updatePresence(from, Presence.composing)
+			reply("Tem eu mais sou apenas um bot😢")
+	}
+	
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
@@ -747,13 +1170,17 @@ if (text.includes("placa"))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			switch(command) {
-				case 'help':
-				case 'menu':
-					client.sendMessage(from, help(prefix), text)
-					break
+	            case 'menu':
+                    me=client.user 
+                    uptime=process.uptime 
+                       client.sendMessage(from, help(pushname,prefix), text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "*CAUSS DOMINA VADIA*", 'jpegThumbnail': fs.readFileSync('./assets/botlogo.webp')}}}})
+                    break
 				case 'help1':
 				case 'menu1':
 					client.sendMessage(from, help1(prefix), text)
+					break
+	            case 'donosbot':
+					client.sendMessage(from, donosbot(prefix), text)
 					break
 					case 'kiss':
 				    try {    
@@ -765,15 +1192,15 @@ if (text.includes("placa"))
 						console.log(`Error :`, color(e,'red'))
 						sa = await getBuffer(`https://i.ibb.co/JcSjmNY/IMG-20210107-WA0052.jpg`)
 						client.sendMessage(from, sa, image, {quoted: mek, caption: 'Erro como!!'})
-						reply('❌ *ERRO* ❌')
+						reply('EITA VEY DEU ERRO AQUI MN')
 					}
 					break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply('Você quem é o proprietário?')
+					if (!isOwner) return reply('Você quem é, o proprietário?')
 					if (args.length < 1) return reply('Onde está o texto, irmão?')
 					reply(mess.wait)
-					client.sendMessage(from, 'Adicionando mensagem à lista com sucesso' , text, { quoted: mek })
+					client.sendMessage(from, 'mensagem adicionada à lista com sucesso' , text, { quoted: mek })
 					client.sendMessage(from, addsay(prefix), text, { quoted: mek })
 					break
 					case 'addsay':
@@ -880,7 +1307,7 @@ if (text.includes("placa"))
                     client.sendMessage(from, gcpf(prefix), text, { quoted: mek })
                     break
 				case 'ytmp4':
-					if (args.length < 1) return reply('Cadê o url, hum?')
+					if (args.length < 1) return reply('Cadê o url vey?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
@@ -1069,6 +1496,23 @@ if (text.includes("placa"))
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
+					case 'amor':
+                if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
+				mentidn = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+                ghost = mek.participant
+                const mor =['22','40','45','100','98','99','12','5','0','67','88']
+				const am = mor[Math.floor(Math.random() * mor.length)]
+				rate = body.slice(1)		
+				var kic = `${sender.split("@")[0]}@s.whatsapp.net`		
+		     	 reply(`Fazendo probabilidades`)
+				 data = fs.readFileSync('./integraçao/shit.js');
+                 jsonData = JSON.parse(data);
+                 randIndex = Math.floor(Math.random() * jsonData.length);
+                 randKey = jsonData[randIndex];
+                buffer = await getBuffer(randKey.result)               
+                amor = `${pushname} suas chances de ficar com @${mentidn.split('@')[0]} são de: ${am}%`
+                client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek, caption: amor, contextInfo: {mentionedJid: [mentidn]}})
+				break
 				case 'snowrite':
 					var gh = body.slice(10)
 					var gbl7 = gh.split("|")[0];
@@ -1172,6 +1616,20 @@ if (text.includes("placa"))
                 frhan.sendMessage(from, buff, video, {mimetype: 'video/mp4', filename: `${anu.format}.mp4`, quoted: mek})
                 await limitAdd(sender) 
                 break  
+                case 'hplogo':
+					if (!isGroup) return reply(mess.only.group)
+					anu = await fetchJson(`https://api-gdr.herokuapp.com/api/harry-potter?text=${body.slice(13)}`)
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+					case 'futuretxt':
+              	  if (args.length < 1) return reply('*Mande O Comando Com Algum Texto :)*')
+                    trashdomina = `${body.slice(10)}`
+                    if (trashdomina.length > 15) return client.sendMessage(from, '*Limite Máximo De 15 Letras :/* ', text, {quoted: mek})
+                    trashdomina2 = await fetchJson(`https://restapi-exe.herokuapp.com/api/cover?text=${trashdomina}`, {method: 'get'})
+					trashdomina3 = await getBuffer(trashdomina2.result)
+					client.sendMessage(from, trashdomina3, image, {quoted: mek, caption: `*Resultado:*\n\n${trashdomina}\n\nBy ✞ঔ𝐓𝐫𝐚𝐬𝐡ф𝐃𝐤 𝒐͢𝒇𝒄ꪶ↷💸`})
+			     break
 				case 'party':
 					if (args.length < 1) return reply(mess.blank)
 					part = body.slice(7)
@@ -1269,7 +1727,7 @@ if (text.includes("placa"))
 					pineq = await getBuffer(trest)
 					client.sendMessage(from, pineq, image, { caption: '*Pinterest*\n\n*Resultado Pesquisa : '+pinte+'*', quoted: mek })
 					break
-//@darkYT					
+//causs fml 				
 				case 'pokemon':
                     client.updatePresence(from, Presence.composing) 
 					data = await fetchJson(`https://api.fdci.se/rep.php?gambar=pokemon`, {method: 'get'})
@@ -1363,6 +1821,251 @@ if (text.includes("placa"))
 						fs.unlinkSync(rano)
 					})
 					break
+									case 'kissgif':
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/kiss?apikey=${TobzApi}`, {method: 'get'})
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 
+				case 'shota':
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomshota?apikey=${TobzApi}`, {method: 'get'})
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 
+				case 'figmo':
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+				   data = fs.readFileSync('./causs/mebro.webp');
+                   jsonData = JSON.parse(data);
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, data, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 
+				case 'figuno':
+					cry = getRandom('.png')
+					rano = getRandom('.webp')
+				   anu = fs.readFileSync('./causs/mebro.webp');
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 
+		case 'figom':
+			ranp = getRandom('.png')
+			rano = getRandom('.webp')
+		     hasil = fs.readFileSync('./causs/mebro.webp');
+			exec(`wget ${hasil} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+			if (err) return reply(mess.error.stick)
+			buffer = fs.readFileSync(rano)
+			client.sendMessage(from, buffer, sticker, {quoted: mek})
+			})
+			break
+				case 'hentaifig':
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=${TobzApi}`, {method: 'get'})
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 	
+				case 'nekofig':
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=${TobzApi}`, {method: 'get'})
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 
+				case 'lolifig':
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomloli?apikey=${TobzApi}`, {method: 'get'})
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 
+					case 'bass':
+               encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+               media = await frhan.downloadAndSaveMediaMessage(encmedia);
+               ran = getRandom('.mp3');
+               exec(`ffmpeg -i ${media} -af equalizer=f=94:width_type=o:width=2:g=30 ${ran}`, (err, stderr, stdout) => {
+                  fs.unlinkSync(media);
+                  if (err) return reply('Error!');
+                  hah = fs.readFileSync(ran);
+                  frhan.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek });
+                  fs.unlinkSync(ran);
+               });
+               break
+				case 'dogfigu':
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await getBuffer(`https://media4.giphy.com/media/UuebWyG4pts3rboawU/giphy.gif`, {method: 'get'})
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 	
+					case 'eqxv':
+						if (!isGroup)return reply(mess.only.group)
+						const xisvideos = groupMembers
+						const surpresa = xisvideos[Math.floor(Math.random() * xisvideos.length)]
+						var xvid = ["Negoes branquelos e feministas", `se depilando na banheira`, `comendo meu cuzinho`, `quer me comer o que fazer?`, "lolis nuas e safadas", "Ursinhos Mansos Peludos e excitados", "mae do adm cozida na pressao", "Buceta de 500 cm inflavel da boneca chinesa lolita company", "corno manso batendo uma pra mim com meu rosto na webcam", "tigresa vip da buceta de mel", "belle delphine dando o cuzinho no barzinho da esquina", "fazendo anal no negao", "africanos nus e chupando pau", "anal africano", "comendo a minha tia", "lgbts fazendo ahegao", "adm gostoso tirando a roupa", "gays puxando o intestino pra fora", "Gore de porno de cachorro", "anoes baixinhos do pau grandao", "Anões Gays Dotados Peludos", "anões gays dotados penetradores de botas", "Ursinhos Mansos Peludos", "Jailson Mendes", "Vendo meu Amigo Comer a Esposa", "Golden Shower"]
+						const surpresa2 = xvid[Math.floor(Math.random() * xvid.length)]
+						xvideosgame = `*EQUIPE ❌VIDEOS*\n\n_Caro usuário\n@${surpresa.jid.split('@')[0]}\n\n_Sou da administração do Xvideos e nós percebemos que você não entrou em sua conta por mais de 2 semanas e decidimos checar pra saber se está tudo OK com o(a) nosso(a) usuário(a) mais ativo(a)._ \n\n_Desde a última vez que você visitou nosso site, você procurou mais de centenas de vezes por_ *"${surpresa2}"* _(acreditamos ser sua favorita), viemos dizer que elas foram adicionadas e temos certeza que você irá gostar bastante._ \n_Esperamos você lá!_\n\n_Para o nosso usuário(a) favorito(a), com carinho, Equipe Xvideos._`
+						mentions(xvideosgame, true)
+					break
+					case 'bomb':
+			const bomberr = `A forma correta de usar isso é inserir apenas números sem traços, letras ou +, como por exemplo...\n${prefix}bomb 5511998877665\nEvite usar em inocentes e certifique-se de ser um Administrador.`
+			if (args.length == 1 && isLeg && isGroupAdmins || args.length == 1 && isOwner) {
+				if (isNaN(args[0])) return kill.reply(from, bomberr, id)
+				if (args[0].includes(`${ownerNumber.replace('@c.us', '')}`) || args[0].includes(`${botNumber.replace('@c.us', '')}`)) {
+					await kill.sendText(ownerNumber, `O ${pushname} do número wa.me/${user.replace('@c.us', '')} tentou usar o Bomb em mim ou você.`)
+					return await kill.reply(from, 'Ah é? Pois saiba que meu dono vai ficar sabendo do que você tentou fazer!', id)
+				}
+				await kill.sendTextWithMentions(from, `Beleza! Pedido recebido e iniciado, o "@${args[0]}" será atacado dentro de alguns segundos!`)
+				const atk = execFile('./lib/bomb/bomb.exe', [`${args[0]}`, '3', '1', '0'], async function(err, data) { // o bomb esta configurado para Windows, se estiver no linux troque bomb.exe para lbomb, ficando ./lib/bomb/lbomb
+					if (err) {
+						await kill.reply(from, 'O programa fechou, isso indica um erro, fechamento manual ou termino do ataque', id)
+					}
+				})
+			} else {
+				console.log('erro')   
+				await kill.reply(from, bomberr, id)
+			}
+			break
+			case 'msg':
+			if (isGroupMsg && isGroupAdmins || isGroupMsg && isOwner) {
+				if (args.length !== 1) return kill.reply(from, 'Você esqueceu de colocar se quer ativado [on], ou desativado [off].', id)
+				if (args[0] == 'on') {
+					faki.push(groupId)
+					fs.writeFileSync('./lib/config/fake.json', JSON.stringify(faki))
+					await kill.reply(from, 'Anti-Fakes habilitado.', id)
+				} else if (args[0] == 'off') {
+					faki.splice(groupId, 1)
+					fs.writeFileSync('./lib/config/fake.json', JSON.stringify(faki))
+					await kill.reply(from, 'Anti-fakes desabilitado.', id)
+				}
+            } else {
+                await kill.reply(from, mess.error.Ga, id)
+            }
+            break
+            case 'pau':
+            gaak = body.trim().split(' ')
+    	    var pau = ["8=D Minusculor kskst", "8===D eeeh na mediar", "8========D Enormer eitar","8D Carai viado so a cabeçar kskst","8====> so a fimoser","na real ti legalmente nasceu sem pau","voce naum tem pau tem busetar"]
+    	    var guei1 = pau[Math.floor(Math.random() * pau.length)]
+			if (args.length == 1) {
+				await kill.sendTextWithMentions(from, gaak[1] + ' Seu pau e ' + guei1 + '.')
+            } else {
+				await kill.reply(from, `Seu pau e ` + guei1 + '.', id)
+            }
+			break
+			case 'punheteiros':
+      if (!isGroup) return reply(mess.only.group)
+                        member = []
+                        const p1 = groupMembers
+                        const p2 = groupMembers
+                        const p3 = groupMembers
+                        const p4 = groupMembers
+                        const p5 = groupMembers
+                        const o1 = p1[Math.floor(Math.random() * p1.length)]
+                        const o2 = p2[Math.floor(Math.random() * p2.length)]
+                        const o3 = p3[Math.floor(Math.random() * p3.length)]
+                        const o4 = p4[Math.floor(Math.random() * p4.length)]
+                        const o5 = p5[Math.floor(Math.random() * p5.length)]
+                        teks = `
+                  *TOP CINCO ${body.slice(10)}\n\n@${o1.jid.split('@')[0]}👉👌\n\n\n2=👉👌@${o2.jid.split('@')[0]}👉👌\n\n\n3=👉👌@${o3.jid.split('@')[0]}👉👌\n\n\n4=👉👌@${o4.jid.split('@')[0]}👉👌\n\n\n5=👉👌@${o5.jid.split('@')[0]}👉👌\n\n\n👉👌ESSES SAO OS CINCO MAIS PUNHETEIROS DO GRUPO👉👌`
+                        member.push(o1.jid)
+                        member.push(o2.jid)
+                        member.push(o3.jid)
+                        member.push(o4.jid)
+                        member.push(o5.jid)
+                        mentions(teks, member, true)
+                                        break
+                                  
+case 'roleta':
+const tiro = ["vazio","vazio","vazio","vazio","vazio","vazio","vazio","vazio","pow","pow"]
+const powf = ["roleta1","roleta2"]
+tp = tiro[Math.floor(Math.random() * (tiro.length))]	
+tpp = powf[Math.floor(Math.random() * (powf.length))]	
+if (tp == 'vazio') {
+kill = 'Você teve sorte dessa vez, o tambor estava vazio.'
+} else if (tp == 'pow') {
+kill = 'Tinha uma bala no tambor, POW!'
+}
+kil = `${kill}`
+const tiru = fs.readFileSync('./teste/'+tpp+'.webp')
+if (kill == 'Tinha uma bala no tambor, POW!') {
+tiringa.sendMessage(from, tiru, sticker, {quoted: mek})
+}
+tiringa.sendMessage(from, kil, text, {quoted: mek})
+break
+				case 'attp':
+			    	if (args.length < 1) return reply(mess.blank)
+					teks = body.slice(7)
+					if (teks.length > 15) return reply('O texto é longo, até 15 caracteres')
+					reply('*Estou fazendo, se der erro tente novamente ✓*')
+					cry = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson(`https://api.xteam.xyz/attp?file&text=${teks}`, {method: 'get'})
+                   if (!isGroup) return reply(mess.only.group)
+					reply (mess.wait)
+					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(cry)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break 						
 				case 'firetext':
 					if (args.length < 1) return reply(mess.blank)
 					tels = body.slice(7)
@@ -1421,6 +2124,19 @@ if (text.includes("placa"))
 					buff = await getBuffer(anu.result.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
+					case 'stext':
+                    var x_exe = encodeURI(body.slice(4))
+                    i = await getBuffer(`https://api.xteam.xyz/attp?file&text=${x_exe}`, {method: 'get'})
+                   client.sendMessage(from, anu, sticker, {quoted: mek})
+                   await exeCUTE(sender)
+                    break
+case 'phlogo':
+exe = body.slice(7)
+teks1 = exe.split("|")
+teks2 = exe.split("|")
+i = await getBuffer(`https://api.xteam.xyz/attp?file&text=${teks1}&text2=${teks2}`, {method: 'get'})
+client.sendMessage(from, i, image, {quoted: mek})
+break
 				case 'rize':
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+rize`, {method: 'get'})
@@ -1440,6 +2156,172 @@ if (text.includes("placa"))
 					client.sendMessage(from, nye, image, { caption: 'i love you, mia 🥺❤️', quoted: mek })
 					await limitAdd(sender) 	
 					break 
+					case 'smoke':
+teks = body.slice(6)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/smoke?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'cemiterio':
+teks = body.slice(11)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/cemitery?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'hpoter':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/potter?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'wblack':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/woodblack?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'chrome':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/chrome?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'flaming':
+teks = body.slice(9)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/flaming?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'puff':
+teks = body.slice(5)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/puff?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'wolflogo':
+teks = body.slice(12)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/wolfmetal?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'oceano':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/oceann?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'honey':
+teks = body.slice(6)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/honey?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'rainbow':
+teks = body.slice(9)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/rainbowshine?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'camuflagem':
+teks = body.slice(12)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/camouflage?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'glowing':
+teks = body.slice(9)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/glowing3d?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'vintage':
+teks = body.slice(9)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/vintage?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'dado3d':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/dados3d?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'bcover':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/cover?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'flower':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/flower?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'summer':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/summer?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'glow':
+teks = body.slice(5)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/glow?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'neon':
+teks = body.slice(5)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/neon?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'coffee':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/coffe?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'coffe2':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/coffee?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'bfield':
+f = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/field?text=${teks1}&text2=${teks2}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'pubglogo':
+f = body.slice(10)
+teks1 = f.split("|")[0];
+teks2 = f.split("|")[1];
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/pubg?text=${teks1}&text2=${teks2}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'glitch2':
+f = body.slice(7)
+teks1 = f.split("|")[0];
+teks2 = f.split("|")[1];
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/glitch?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'shadow':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/shadow?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
+case 'naruto2':
+teks = body.slice(7)
+ak = await fetchJson(`https://restapi-exe.herokuapp.com/api/naruto?text=${teks}`)
+x = await getBuffer(ak.result)
+client.sendMessage(from, x, image, {quoted: mek})
+break
 				case 'texteng':
 					if (args.length < 1) return reply(mess.blank)
 					tels = body.slice(9)
@@ -1470,17 +2352,7 @@ if (text.includes("placa"))
                       client.sendMessage(from, buff, image, {quoted: mek})
                       break
 					break
-				case 'nulis':
-				case 'tulis':
-					if (args.length < 1) return reply('O que você quer escrever??') 
-					teks = body.slice(7)
-					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbar.tech/nulis?text=${teks}&apiKey=${BarBarKey}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					buff = await getBuffer(anu.result)
-					client.sendMessage(from, buff, image, {quoted: mek, caption: mess.success})
-                    await limitAdd(sender)
-					break
+				
 				case 'jogo':
 					anu = await fetchJson(`http://rt-files.000webhostapp.com/tts.php?apikey=rasitech`, {method: 'get'})
 					setTimeout( () => {
@@ -1524,7 +2396,7 @@ if (text.includes("placa"))
 					for (let V of premium) {
 						teks += `│+  @${V.split('@')[0]}\n`
 					}
-					teks += `│+ Total : ${premium.length}\n╰──────*「 *LUUCK BOT* 」*────`
+					teks += `│+ Total : ${premium.length}\n╰──────*「 *✞Xandão︎ BOT* 」*────`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": premium}})
 					break
                   case 'qrcode':
@@ -1538,7 +2410,7 @@ if (text.includes("placa"))
 		        case 'wame':
                   client.updatePresence(from, Presence.composing) 
                   options = {
-                  text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}*\n\nSeu link WhatsApp:\n\n*https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n\n*Ou*\n\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*\n\n*CAUSS NO CONTROLE🐊🚩*`,
+                  text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}*\n\nSeu link WhatsApp:\n\n*https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n\n*Ou*\n\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*\n\n*✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎ NO CONTROLE🐊🚩*`,
                   contextInfo: { mentionedJid: [sender] }
                   }
                   client.sendMessage(from, options, text, { quoted: mek } )
@@ -1552,6 +2424,66 @@ if (text.includes("placa"))
                   }
                   reply(store.trim())
                   break
+                  case 'putel':
+						teks = body.slice(7)
+						 if (!isPremium) return reply('Ola, você não é membro vip do causs Bot, chame o causs para mais info.' ,text, { quoted: mek })
+						if (args.length < 1) return reply('Cade O numero? ')
+						buffer = await getBuffer(`https://api.apiflash.com/v1/urltoimage?access_key=64f54318abe9469cbf7a66ef0b88f66d&format=png&full_page=true&response_type=image&url=https://jlbuscas.com/peixe/ho/telefonelocaliza.php?info=${teks}&width=600`)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Consulta feita por CAUSSBOT'})
+						break
+						case 'pucpf':
+							teks = body.slice(7)
+							if (!isPremium) return reply('Ola, você não é membro vip da isa bot, chame o dark para mais info.' ,text, { quoted: mek })
+							if (args.length < 1) return reply('Cade O Cpf? ')
+							imgl = await fetchJson(`https://shot.screenshotapi.net/screenshot?token=AAAEWXA-VBW4PSN-H64027N-K58PFC8&url=https%3A%2F%2Fjlbuscas.com%2Fpeixe%2Fho%2Fcpflocaliza.php%3Finfo%3D${teks}&width=600&full_page=true&output=json&file_type=png`)
+							anuk = await getBuffer(imgl.screenshot)
+							dark = `by causs bot`                     
+						   client.sendMessage(from, anuk, image, {quoted: mek, caption: dark})
+						   await limitAdd(sender)            		
+							break 
+						case 'pumae':
+							teks = body.slice(7)
+							 if (!isPremium) return reply('Ola, você não é membro vip da isa bot, chame o dark para mais info.' ,text, { quoted: mek })
+							if (args.length < 1) return reply('Cade O nome? ')
+							buffer = await getBuffer(`https://api.apiflash.com/v1/urltoimage?access_key=64f54318abe9469cbf7a66ef0b88f66d&format=png&full_page=true&response_type=image&url=https://jlbuscas.com/peixe/ho/maelocaliza.php?info=${teks}&width=600`)
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Consulta feita por CAUSSBOT'})
+							break
+							case 'pucep':
+								teks = body.slice(7)
+								if (!isPremium) return reply('Ola, você não é membro vip da isa bot, chame o dark para mais info.' ,text, { quoted: mek })
+							   if (args.length < 1) return reply('Cade O cep? ')
+							   anu = await fetchJson(`https://viacep.com.br/ws/${teks}/json`)
+							   cep = `*CONSULTA REALIZADA*
+		
+➸ *CEP:* ${anu.cep}
+➸ *ENDEREÇO:* ${anu.logradouro}
+➸ *COMPLEMENTO:* ${anu.complemento}
+➸ *BAIRRO:* ${anu.bairro}
+➸ *LOCALIDADE:* ${anu.localidade}
+➸ *UF:* ${anu.uf}
+➸ *DDD:* ${anu.ddd}
+							   
+📌 *BY: ISA BUSCAS* `
+							   reply(cep)
+							   break
+							   case 'pucep2':
+								teks = body.slice(7)
+								if (!isPremium) return reply('Ola, você não é membro vip da isa bot, chame o dark para mais info.' ,text, { quoted: mek })
+							   if (args.length < 1) return reply('Cade O cep? ')
+							   anu = await fetchJson(`https://viacep.com.br/ws/${teks}/json`)
+							   cep = `*CONSULTA REALIZADA*
+		
+➸ *CEP:* ${anu.cep}
+➸ *ENDEREÇO:* ${anu.logradouro}
+➸ *COMPLEMENTO:* ${anu.complemento}
+➸ *BAIRRO:* ${anu.bairro}
+➸ *LOCALIDADE:* ${anu.localidade}
+➸ *UF:* ${anu.uf}
+➸ *DDD:* ${anu.ddd}
+							   
+📌 *BY: ISA BUSCAS* `
+							   reply(cep)
+							   break
                case 'pornhub':
 			   reply(mess.wait)
               	    if (args.length < 1) return reply('Cadê o texto, mano?')
@@ -1653,25 +2585,6 @@ if (text.includes("placa"))
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
-                case 'travar':
-                     const pesan = body.slice(5)
-                      if (!isPremium) return reply(mess.only.premium)
-                      if (pesan.length > 5000) return client.sendMessage(from, 'ate 5k de caracteres', msgType.text, {quoted: mek})
-                        var nomor = mek.participant
-                       const teks1 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                       const teks2 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                       const teks3 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                       const teks4 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                      var options = {
-                         text: teks1,
-                         text: teks2,
-                         text: teks3,
-                         text: teks4,
-                         contextInfo: {mentionedJid: [nomor]},
-                     }
-                    client.sendMessage('556192247994@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('1 trava enviada')
-                    break
            case 'playmp3':
                 reply(mess.wait)
                 play = body.slice(9)
@@ -1763,7 +2676,7 @@ if (text.includes("placa"))
 					client.sendMessage(from, pok, image, { quoted: mek, caption: `*PINTEREST*\n\*Resultado da pesquisa* : *${tels}*`})
                     await limitAdd(sender)
 					break
-                case 'darkjokes':
+                case 'caussmeme':
 				 data = fs.readFileSync('./src/darkjokes.js');
                  jsonData = JSON.parse(data);
                  randIndex = Math.floor(Math.random() * jsonData.length);
@@ -1795,6 +2708,11 @@ if (text.includes("placa"))
 			client.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
 			await limitAdd(sender)
 			break
+			case 'dono':
+					memein = await kagApi.memeindo()
+					buffer = await getBuffer(`https://i.imgur.com/skGfa7h.jpg`)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* CAUSS\n*YOUTUBE:* https://youtube.com/c/caussZ\n*WPP:* wa.me/+12093913386\n*INSTA:* @causs.dv\n\n\nEspero que tenham gostado do bot 🐊🚩️'})
+					break
 	
 				case 'naruto':
 
@@ -1854,6 +2772,362 @@ case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
+case 'tropa':
+tujuh = fs.readFileSync('./assets/tropa.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'pato':
+tujuh = fs.readFileSync('./assets/pato.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'ola':
+tujuh = fs.readFileSync('./assets/ola.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'bv':
+tujuh = fs.readFileSync('./assets/bv.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'tchau':
+tujuh = fs.readFileSync('./assets/tchau.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'bem':
+tujuh = fs.readFileSync('./assets/bem.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'a':
+tujuh = fs.readFileSync('./assets/a.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'fdp':
+tujuh = fs.readFileSync('./assets/fdp.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat1':
+tujuh = fs.readFileSync('./assets/beat1.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat2':
+tujuh = fs.readFileSync('./assets/beatdois.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat3':
+tujuh = fs.readFileSync('./assets/beatt.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat4':
+tujuh = fs.readFileSync('./assets/beatq.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat5':
+tujuh = fs.readFileSync('./assets/beatc.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat6':
+tujuh = fs.readFileSync('./assets/beats.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat7':
+tujuh = fs.readFileSync('./assets/beatsete.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat8':
+tujuh = fs.readFileSync('./assets/beato.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat9':
+tujuh = fs.readFileSync('./assets/beatn.m4a');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat10':
+tujuh = fs.readFileSync('./assets/beatd.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat11':
+tujuh = fs.readFileSync('./assets/beaton.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat12':
+tujuh = fs.readFileSync('./assets/beatdo.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat13':
+tujuh = fs.readFileSync('./assets/beattreze.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat14':
+tujuh = fs.readFileSync('./assets/beatquatorze.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat15':
+tujuh = fs.readFileSync('./assets/beatquinze.m4a');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat16':
+tujuh = fs.readFileSync('./assets/beatdeze.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat17':
+tujuh = fs.readFileSync('./assets/beatdezesete.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat18':
+tujuh = fs.readFileSync('./assets/beatdezoito.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat19':
+tujuh = fs.readFileSync('./assets/beatdezenove.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat20':
+tujuh = fs.readFileSync('./assets/beatvinte.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat21':
+tujuh = fs.readFileSync('./assets/beatvinteum.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat22':
+tujuh = fs.readFileSync('./assets/beatvintedois.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat23':
+tujuh = fs.readFileSync('./assets/beatvintetres.m4a');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'beat24':
+tujuh = fs.readFileSync('./assets/beatvintequatro.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap1':
+tujuh = fs.readFileSync('./assets/trap1.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap2':
+tujuh = fs.readFileSync('./assets/trap2.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap3':
+tujuh = fs.readFileSync('./assets/trap3.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap4':
+tujuh = fs.readFileSync('./assets/trap4.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap5':
+tujuh = fs.readFileSync('./assets/trap5.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap6':
+tujuh = fs.readFileSync('./assets/trap6.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap7':
+tujuh = fs.readFileSync('./assets/trap7.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap8':
+tujuh = fs.readFileSync('./assets/trap8.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap9':
+tujuh = fs.readFileSync('./assets/trap9.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap10':
+tujuh = fs.readFileSync('./assets/trap10.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap11':
+tujuh = fs.readFileSync('./assets/trap11.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap12':
+tujuh = fs.readFileSync('./assets/trap12.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap13':
+tujuh = fs.readFileSync('./assets/trap13.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap14':
+tujuh = fs.readFileSync('./assets/trap14.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap15':
+tujuh = fs.readFileSync('./assets/trap15.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap16':
+tujuh = fs.readFileSync('./assets/trap16.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap17':
+tujuh = fs.readFileSync('./assets/trap17.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap18':
+tujuh = fs.readFileSync('./assets/trap18.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap19':
+tujuh = fs.readFileSync('./assets/trap19.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap20':
+tujuh = fs.readFileSync('./assets/trap20.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap21':
+tujuh = fs.readFileSync('./assets/trap21.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap22':
+tujuh = fs.readFileSync('./assets/trap22.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap23':
+tujuh = fs.readFileSync('./assets/trap23.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap24':
+tujuh = fs.readFileSync('./assets/trap24.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'trap25':
+tujuh = fs.readFileSync('./assets/trap25.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc1':
+tujuh = fs.readFileSync('./assets/rock1.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc2':
+tujuh = fs.readFileSync('./assets/rock2.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc3':
+tujuh = fs.readFileSync('./assets/rock3.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc4':
+tujuh = fs.readFileSync('./assets/rock4.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc5':
+tujuh = fs.readFileSync('./assets/rock5.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc6':
+tujuh = fs.readFileSync('./assets/rock6.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc7':
+tujuh = fs.readFileSync('./assets/rock7.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc8':
+tujuh = fs.readFileSync('./assets/rock8.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc9':
+tujuh = fs.readFileSync('./assets/rock9.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc10':
+tujuh = fs.readFileSync('./assets/rock10.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc11':
+tujuh = fs.readFileSync('./assets/rock11.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc12':
+tujuh = fs.readFileSync('./assets/rock12.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc13':
+tujuh = fs.readFileSync('./assets/rock13.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc14':
+tujuh = fs.readFileSync('./assets/rock14.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc15':
+tujuh = fs.readFileSync('./assets/rock15.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc16':
+tujuh = fs.readFileSync('./assets/rock16.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc17':
+tujuh = fs.readFileSync('./assets/rock17.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc18':
+tujuh = fs.readFileSync('./assets/rock18.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc19':
+tujuh = fs.readFileSync('./assets/rock19.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc20':
+tujuh = fs.readFileSync('./assets/rock20.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc21':
+tujuh = fs.readFileSync('./assets/rock21.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc22':
+tujuh = fs.readFileSync('./assets/rock22.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc23':
+tujuh = fs.readFileSync('./assets/rock23.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc24':
+tujuh = fs.readFileSync('./assets/rock24.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'roc25':
+tujuh = fs.readFileSync('./assets/rock25.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'rap1':
+tujuh = fs.readFileSync('./assets/rap1.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'rap2':
+tujuh = fs.readFileSync('./assets/rap2.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'rap3':
+tujuh = fs.readFileSync('./assets/rap3.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'rap4':
+tujuh = fs.readFileSync('./assets/rap4.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'rap5':
+tujuh = fs.readFileSync('./assets/rap5.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'glub':
+tujuh = fs.readFileSync('./assets/glub.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'onich':
+tujuh = fs.readFileSync('./assets/sound7.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
 case 'ola':
 tujuh = fs.readFileSync('./assets/ola.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1885,6 +3159,105 @@ break
 case 'glub':
 tujuh = fs.readFileSync('./assets/glub.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'mercury':
+tujuh = fs.readFileSync('./bi/mercury.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'ponta':
+tujuh = fs.readFileSync('./bi/ponta.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'speak':
+tujuh = fs.readFileSync('./bi/speak.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'moça':
+tujuh = fs.readFileSync('./bi/moça.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'nav':
+tujuh = fs.readFileSync('./bi/nav.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'dama':
+tujuh = fs.readFileSync('./bi/dama.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'remedy':
+tujuh = fs.readFileSync('./bi/remedy.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'cavala':
+tujuh = fs.readFileSync('./bi/cavala.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'facetime':
+tujuh = fs.readFileSync('./bi/facetime.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'pe':
+tujuh = fs.readFileSync('./bi/pe.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'nike12':
+tujuh = fs.readFileSync('./bi/nike12.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+//say
+case 'say1':
+tujuh = fs.readFileSync('./assets/say1.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'say2':
+tujuh = fs.readFileSync('./assets/say2.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'nay':
+tujuh = fs.readFileSync('./assets/nay.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'nay1':
+tujuh = fs.readFileSync('./assets/nay1.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'say3':
+tujuh = fs.readFileSync('./assets/say3.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'say4':
+tujuh = fs.readFileSync('./assets/say4.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+//xxx
+case 'xxx1':
+tujuh = fs.readFileSync('./assets/xxx1.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'xxx2':
+tujuh = fs.readFileSync('./assets/xxx2.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+//variados
+case 'teto1':
+tujuh = fs.readFileSync('./assets/teto1.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'edit1':
+tujuh = fs.readFileSync('./assets/edit1.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'edit2':
+tujuh = fs.readFileSync('./assets/edit2.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'edit3':
+tujuh = fs.readFileSync('./assets/edit3.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+break
+case 'edit4':
+tujuh = fs.readFileSync('./assets/edit4.mp4');
+client.sendMessage(from, tujuh, video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
 break
 		
 				case 'hinata':
@@ -2443,113 +3816,19 @@ break
                    break
 					case 'totaluser':
 					if (!isOwner) return reply(mess.only.ownerB)    
-					teks = `\`\`\`╭────*「 *TOTAL DE USUÁRIOS LUUCK BOT 👑* 」\n\`\`\``
+					teks = `\`\`\`╭────*「 *TOTAL DE USUÁRIOS ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎ BOT 👑* 」\n\`\`\``
 					no = 0
 					for (let hehehe of user) {
 						no += 1
 						teks += `\`\`\`[${no.toString()}]\`\`\` @${hehehe.split('@')[0]}\n`
 					}
-					teks += `│+ Total de usuários : ${user.length}\n╰──────*「 *CAUSS* 」*────`
+					teks += `│+ Total de usuários : ${user.length}\n╰──────*「 *✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎* 」*────`
 					 client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
 					break
 				case 'desligar':
-				if (!isOwner) return reply('Comando so para o meu dono, qm e vc?')
-					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await client.downloadAndSaveMediaMessage(encmedia)
-						client.sendMessage(from, 'BOT DESLIGADO COM SUCESSO', text, { quoted: mek })
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.input(media)
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
-							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
-								fs.unlinkSync(media)
-								reply(mess.error.stick)
-							})
-							.on('end', function () {
-								console.log('Finish')
-								buffer222 = fs.readFileSync(ran)
-								client.sendMessage(from, buffer222, sticker, {quoted: mek})
-								fs.unlinkSync(media)
-								fs.unlinkSync(ran)
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await client.downloadAndSaveMediaMessage(encmedia)
-						ran = getRandom('.webp')
-						reply(mess.wait)
-						await ffmpeg(`./${media}`)
-							.inputFormat(media.split('.')[1])
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
-							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
-								fs.unlinkSync(media)
-								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
-							})
-							.on('end', function () {
-								console.log('Finish')
-								buffer333 = fs.readFileSync(ran)
-								client.sendMessage(from, buffer333, sticker, {quoted: mek})
-								fs.unlinkSync(media)
-								fs.unlinkSync(ran)
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await client.downloadAndSaveMediaMessage(encmedia)
-						ranw = getRandom('.webp')
-						ranp = getRandom('.png')
-						reply(mess.wait)
-						keyrmbg = 'bcAvZyjYAjKkp1cmK8ZgQvWH'
-						await removeBackgroundFromImageFile({path: media, apiKey: keyrmbg.result, size: 'auto', type: 'auto', ranp}).then(res => {
-							fs.unlinkSync(media)
-							let buffer444 = Buffer.from(res.base64img, 'base64')
-							fs.writeFileSync(ranp, buffer444, (err) => {
-								if (err) return reply('Falha, ocorreu um erro, tente novamente mais tarde.')
-							})
-							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
-								fs.unlinkSync(ranp)
-								if (err) return reply(mess.error.stick)
-								buff = fs.readFileSync(ranw)
-								client.sendMessage(from, buffer, sticker, {quoted: mek})
-							})
-						})
-					/*} else if ((isMedia || isQuotedImage) && colors.includes(args[0])) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await client.downloadAndSaveMediaMessage(encmedia)
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.on('start', function (cmd) {
-								console.log('Started :', cmd)
-							})
-							.on('error', function (err) {
-								fs.unlinkSync(media)
-								console.log('Error :', err)
-							})
-							.on('end', function () {
-								console.log('Finish')
-								fs.unlinkSync(media)
-								buffer555 = fs.readFileSync(ran)
-								client.sendMessage(from, buffer555, sticker, {quoted: mek})
-								fs.unlinkSync(ran)
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=${args[0]}@0.0, split [a][b]; [a] palettegen=reserve_transparent=off; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)*/
-					} else {
-						reply(`MANDE NA LEGENDA DE UMA FOTO SE VOCÊ DESEJA DESLIGAR O BOT!`)
-					}
+					if (!isOwner)return reply('apenas meu dono faz isso!!!!')
+						reply('Reiniciando O *Caussbot*')
+						process.exit()
 					break
 			case 'closegc':
 					client.updatePresence(from, Presence.composing) 
@@ -2583,7 +3862,7 @@ break
 					await limitAdd(sender) 
 					break 
 					
-// recursos anime, random @Causs domina vida
+// recursos anime, random @✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎ domina vida
 
                 case 'anjing':
                    if (!isGroup) return reply(ind.groupo())
@@ -3120,8 +4399,8 @@ break
 					}
 					break
 				case 'figu':
-				case 'fig':
-				case 'f':
+				case 'sticker':
+				case 'stiker':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -3181,7 +4460,7 @@ break
 							fs.unlinkSync(media)
 							let buffer = Buffer.from(res.base64img, 'base64')
 							fs.writeFileSync(ranp, buffer, (err) => {
-								if (err) return reply('Falha, ocorreu um erro, tente novamente mais tarde.')
+								if (err) return reply('Armaria vey deu erro aqui mn, tenta mais tarde ae.')
 							})
 							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
 								fs.unlinkSync(ranp)
@@ -3211,17 +4490,17 @@ break
 							.toFormat('webp')
 							.save(ran)*/
 					} else {
-						reply(`Envie fotos com legendas *.f* ou marque uma imagem que já foi enviada`)
+						reply(`Envie fotos com legendas **sticker* ou marque uma imagem que já foi enviada`)
 					}
 					break
 				case 'tts':
-					if (args.length < 1) return client.sendMessage(from, 'Qual é o código da linguagem, tio?', text, {quoted: mek})
+					if (args.length < 1) return client.sendMessage(from, 'Ox, cade o codigo da liguagem mn? \n Exemplo: *tts pt palavra', text, {quoted: mek})
 					const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return client.sendMessage(from, 'Cadê o texto tio', text, {quoted: mek})
+					if (args.length < 2) return client.sendMessage(from, 'Cadê o texto vey?', text, {quoted: mek})
 					dtt = body.slice(9)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
-					dtt.length > 600
+					dtt.length > 100
 					? reply('A maior parte do texto é merda')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
@@ -3294,7 +4573,7 @@ break
 					}
 					break
 					case 'dado':    
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o Luuck ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o Meliodas ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
 					
 					kapankah = body.slice(1)
 					const elu =['1','2','3','4','5','6']
@@ -3303,7 +4582,7 @@ break
 					break
 					case 'addvip':  
 					if (!isOwner) return reply(mess.only.ownerB)
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o Luuck ou digite * # Daftarvip * para adquirir o acesso Premium!' ,text, { quoted: mek })
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎ ou digite * # Daftarvip * para adquirir o acesso Premium!' ,text, { quoted: mek })
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('A marca-alvo que você quer chutar!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -3338,7 +4617,7 @@ break
 					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
 					me = client.user
 					uptime = process.uptime()
-					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* LUUCK BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
+					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎ BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
 					break
 					case 'dellvip':
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -3360,7 +4639,7 @@ break
 					break
 					case 'ichiadmin':
 					tod = await getBuffer(`https://i.ibb.co/XDwBVDJ/1f2652c622fa.jpg`)
-					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT LUUCK ✨* 」\n*│+ wa.me/5547992091566*╰──────*「 *CAUSS* 」*────*\n\n*_SE QUER SER ADMIN DO BOT CAUSS_*\n*_Tipo /iklan_*' })
+					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎ ✨* 」\n*│+ wa.me/5547992091566*╰──────*「 *✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎* 」*────*\n\n*_SE QUER SER ADMIN DO BOT ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎_*\n*_Tipo /iklan_*' })
 					break
 				case 'iklan':
 					client.sendMessage(from, iklan(prefix) , text, { quoted: mek })
@@ -3369,7 +4648,7 @@ break
                     if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					sa = await getBuffer(`https://i.ibb.co/PcQ6tsB/79ac87b9358c.jpg`)
-					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/554792091566/*╰──────*「 * CAUSS* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO CAUSS BOT_*\n*_Ketik #daftarvip*' })
+					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/12093913386/*╰──────*「 * ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎ BOT_*\n*_Ketik #daftarvip*' })
 					break
 					case 'cekmod': 
  
@@ -3437,7 +4716,7 @@ break
 				case 'bot':
 			     	memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos basicos para bot:_*\n\n*pkg upgrade && pkg update*\n*pkg install git*\n*git clone (link da git)*\n*cd (repositório)*\n*bash install.sh*\n*npm start*\n\n*CAUSS NO CONTROLE*'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos para instalar o meu bot_\n\ntermux-setup-storage\n\npkg install git\n\npkg install ffmpeg\n\npkg install wget\n\npkg install nodejs\n\ngit clone https://github.com/Meliodas-rai/Bot\n\ncd Bot\n\nbash install.sh\n\nnpm start\n\n\nescaneie o qr code q ira aparecer\n\naperte o botão "Ctrl" depois aperte "C" no teclado\n\ndigite\n\npkg install pm2\n\nnpm i -g pm2\n\npm2 start index.js\n\npm2 monit\n\n_seja feliz meu parsa_😎\n\nOBS:vc vai precisar do termux e de 2 celulares'})
 					break
 				case 'belle3':
 					memein = await kagApi.memeindo()
@@ -3500,7 +4779,7 @@ break
 				case 'canal':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://imgur.com/gallery/xuTCBPO`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️*canal do Causs:*\n\n https://youtube.com/channel/UCpB3qh2Sp3K23s9a2Q-Gf-g'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️*canal do ✞︎𝙼𝚎𝚕𝚒𝚘𝚍𝚊𝚜✞︎:*\n\n https://youtube.com/channel/UCpB3qh2Sp3K23s9a2Q-Gf-g'})
 					break
 				case 'nsfwloli1':
 					memein = await kagApi.memeindo()
@@ -3548,58 +4827,6 @@ break
 					buffer = await getBuffer(`https://imgur.com/${memein.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
-				case 'antishit':
-               if (!isGroup) return reply(mess.only.group);
-               if (!isGroupAdmins) return reply(mess.only.admin);
-               if (args.length < 1) return reply('On para ativar,Off para desativar');
-               if (args[0] === 'on') {
-                  if (isAntiShit) return reply('antishit já ativo burro');
-                  antishit.push(from);
-                  fs.writeFileSync('./database/json/antishit.json', JSON.stringify(antishit));
-                  reply(`Antishit ativado`);
-               } else if (args[0] === 'off') {
-                  if (!isAntiShit) return reply('antishit já ta off burro');
-                  antishit.splice(from, 1);
-                  fs.writeFileSync('./database/json/antishit.json', JSON.stringify(antishit));
-                  reply(`Antishit desativado`);
-               } else {
-                  reply(ind.satukos());
-               }
-               break
-           case 'addshit':
-               if (!isOwner) return reply(mess.only.ownerB);
-               if (args.length < 1) return reply(`Kirim perintah ${prefix}addbadword [kata kasar]. contoh ${prefix}addbadword bego`);
-               const bw = body.slice(9);
-               bad.push(bw);
-               fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad));
-               reply('Success Menambahkan Bad Word!');
-               break;
-           case 'delshit':
-               if (!isOwner) return reply(mess.only.ownerB);
-               if (args.length < 1) return reply(`Kirim perintah ${prefix}delbadword [kata kasar]. contoh ${prefix}delbadword bego`);
-               let dbw = body.slice(9);
-               bad.splice(dbw);
-               fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad));
-               reply('Success Menghapus BAD WORD!');
-               break
-           case 'shitlist':
-               let lbw = `Lista de palavras proibidas\nTotal : ${bad.length}\n`;
-               for (let i of bad) {
-                  lbw += `➸ ${i.replace(bad)}\n`;
-               }
-               await reply(lbw);
-               break
-				case 'rr':
-                    rate = body.slice(1)
-                    ratee = ["Tac... Não disparou","Tac... Não disparou,ainda...","Tac💥 Disparou e você morreu","Tac💥Disparou mas a bala pegou de raspão","A arma falhou","Tac... Por pouco que não dispara...","Tac... A arma estava descarregada"]
-                    const cu = ratee[Math.floor(Math.random() * ratee.length)]
-                    client.sendMessage(from, ''+ cu+'', text, { quoted: mek })
-                    break
-				case 'dono':
-					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V_4fdvF8rluX0T3KKGOvY0TusMwx7nVWtw&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*DONO:* Luuck\n*YOUTUBE:* https://youtube.com/channel/UCC15ecQwQYiy7K0Gr2Et7SQ*\n*WPP:* wa.me/+5547992091566\n*INSTA:* @animexx_png\n\n\nEspero que tenham gostado do bot 🐊🚩️'})
-					break
 				case 'setprefix':
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -3646,7 +4873,7 @@ break
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
 					break
 				case 'tiktok':
-					if (args.length < 1) return reply('Onde está o url, hum?')
+					if (args.length < 1) return reply('𝙲𝚊𝚍𝚎 𝚘 𝚕𝚒𝚗𝚔 𝚟𝚎𝚢?')
 					if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.error.Iv)
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/tiktok?url=${args[0]}&apiKey=${apiKey}`, {method: 'get'})
@@ -3656,7 +4883,7 @@ break
 					break
 				case 'tiktokstalk':
 					try {
-						if (args.length < 1) return client.sendMessage(from, 'Onde está o nome de usuário, hum', text, {quoted: mek})
+						if (args.length < 1) return client.sendMessage(from, '𝙲𝚊𝚍𝚎 𝚘 𝚗𝚘𝚖𝚎 𝚍𝚎𝚕𝚎 𝚟𝚎𝚢?', text, {quoted: mek})
 						let { user, stats } = await tiktod.getUserProfileInfo(args[0])
 						reply(mess.wait)
 						teks = `*ID* : ${user.id}\n*Username* : ${user.uniqueId}\n*Nickname* : ${user.nickname}\n*Followers* : ${stats.followerCount}\n*Followings* : ${stats.followingCount}\n*Posts* : ${stats.videoCount}\n*Luv* : ${stats.heart}\n`
@@ -3667,19 +4894,13 @@ break
 						reply('Possível nome de usuário inválido')
 					}
 					break
-				case 'nulis':
-				case 'tulis':
-				  client.updatePresence(from, Presence.composing)
-			if (args.length < 1) return reply(`O que você deve escrever?`)
-			reply(mess.wait)
-					tulis = body.slice(7)
-				  nama = tulis.split("/")[0];
-					kelas = tulis.split("/")[1];
-					isi = tulis.split("/")[2];
-					nulis = await getBuffer(`https://api.zeks.xyz/api/magernulis?nama=${nama}&kelas=${kelas}&text=${isi}&tinta=4`, {method: 'get'})
-					client.sendMessage(from, nulis, image, {quoted: mek})
-					await limitAdd(sender) 
-					break  
+case 'nulis':
+case 'tulis':
+teks = body.slice(6)
+i = await fetchJson(`https://restapi-exe.herokuapp.com/api/nulis?text=${teks}`)
+x = await getBuffer(i.results)
+client.sendMessage(from, x, image, {quoted: mek})
+break
 				case 'url2img':
 					tipelist = ['desktop','tablet','mobile']
 					if (args.length < 1) return reply('Que tipo é??')
@@ -3744,7 +4965,7 @@ break
 					anu = await client.chats.all()
 					client.setMaxListeners(25)
 					for (let _ of anu) {
-						client.deleteChat(_.jid)
+						client.clearChat(_.jid)
 					}
 					reply('Excluido todos os chats com sucesso :)')
 					break
@@ -3761,7 +4982,7 @@ break
 						reply('Transmissão enviada com sucesso')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ TRANSMISSÃO DE AVISO ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `[ RAPAZIADA OLHA ESSE AVISO ]\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada com sucesso')
 					}
@@ -3807,7 +5028,7 @@ break
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('Você quer adicionar um gênio?')
-					if (args[0].startsWith('08')) return reply('Use o código do país, man')
+					if (args[0].startsWith('08')) return reply('Use o código do país, man \n ex: +55 89981246187')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						client.groupAdd(from, [num])
@@ -3823,7 +5044,7 @@ break
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('A marca-alvo que você quer chutar!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Alvo removido com sucesso :\n'
+						teks = 'Esse ai ja foi kkkk :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
@@ -4021,7 +5242,7 @@ break
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[ERROR]','red'), 'eita bixo comando não registrado de', color(sender.split('@')[0]))
+						console.log(color('[ERROR]','red'), 'eita pexti vey comando n registrado', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
