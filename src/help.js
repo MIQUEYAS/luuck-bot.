@@ -1,235 +1,308 @@
-const help = (prefix) => {
+const help = (pushname, prefix) => { 
+
 	return `
 <══════════════════════>
-      *LUUCK BOT*
+      *CAUSS BOT*
  <══════════════════════>
 
 __█████████  ● ᏴϴͲ●ᎷᎬΝႮ●         
-__█▄█████▄█   *DONO*    : Luuck
+__█▄█████▄█   
 __█▼▼▼▼▼█ 
-_██ᏴϴͲ Ꮩ3.8██▌ 
+_██ᏴϴͲ Ꮩ4.0██▌  
 __█▲▲▲▲▲█ 
 __█████████ 
 ____██_____██
 
 ┌─────────❶.❷────────
-┠❥〘 INFORMAÇÕES 〙
-┠❥
-┠❥ *LUUCK BOT* 
-┠❥ 𝐃𝐎𝐍𝐎: Luuck (base dark) 
-┠❥ *wa.me/+12093913386*
-┠❥ 𝐒𝐓𝐀𝐓𝐔𝐒: ON
-┠❥
-┠❥
-┠❥ ══ ❥〘 MENU 〙❥ ══
-┠❥
-┠❥ *${prefix}figu*
-┠❥ *${prefix}toimg*
-┠❥ *${prefix}darkjokes (memes aleatórios)*
-┠❥ *${prefix}memeindo*
-┠❥ *${prefix}tts*
-┠❥ *${prefix}lolih [on]*
-┠❥ *${prefix}nsfwloli [off]*
-┠❥ *${prefix}url2img*
-┠❥ *${prefix}leens [na legenda]*
-┠❥ *${prefix}wait [na legenda]*
-┠❥ *${prefix}setprefix*
-┠❥
-┠❥ ══ ❥〘 OUTROS 〙❥ ══
-┠❥
-┠❥ *${prefix}linkgp*
-┠❥ *${prefix}simih [1/0]*
-┠❥ *${prefix}marcar*
-┠❥ *${prefix}add [@]*
-┠❥ *${prefix}banir [@]*
-┠❥ *${prefix}promover [@]*
-┠❥ *${prefix}rebaixar*
-┠❥ *${prefix}admins*
-┠❥ *${prefix}marcar2*
-┠❥ *${prefix}bc [texto]* (ele faz uma ™)
-┠❥ *${prefix}marcar3*
-┠❥ *${prefix}bloqueados*
-┠❥ *${prefix}bloquear [@]*
-┠❥ *${prefix}desbloquear [@]*
-┠❥ *${prefix}limpar*
-┠❥ *${prefix}bc [ *texto* ]*
-┠❥ *${prefix}bemvindo [1/0]*
-┠❥ *${prefix}clonar [@]*
-┠❥ *${prefix}help1*
-┠❥ *${prefix}dono*
-┠❥ *${prefix}owner*
-┠❥ *${prefix}tts [texto]*
-┠❥ *${prefix}setnome*
-┠❥ *${prefix}termux*
-┠❥ *${prefix}setfoto*
-┠❥ *${prefix}grupoinfo*
-┠❥ *${prefix}ytmp4*
-┠❥ *${prefix}bomdia*
-┠❥ *${prefix}boanoite*
-┠❥ *${prefix}marcar*
-┠❥ *${prefix}marcar2*
-┠❥ *${prefix}marcar3*
-┠❥
-┠❥ ══ ❥〘 IMAGENS 〙 ❥ ══
-┠❥
-┠❥ *${prefix}loli* [off]
-┠❥ *${prefix}loli1*
-┠❥ *${prefix}hentai*
-┠❥ *${prefix}dono*
-┠❥ *${prefix}boanoite*
-┠❥ *${prefix}bomdia*
-┠❥ *${prefix}boatarde*
-┠❥ *${prefix}mia [aleatórias]*
-┠❥ *${prefix}rize [aleatórias]*
-┠❥ *${prefix}minato [aleatórias]*
-┠❥ *${prefix}boruto [aleatórias]*
-┠❥ *${prefix}hinata [aleatórias]*
-┠❥ *${prefix}sasuke [aleatórias]*
-┠❥ *${prefix}sakura [aleatórias]*
-┠❥ *${prefix}naruto [aleatórias]*
-┠❥ *${prefix}meme*   
-┠❥ *${prefix}lofi*
-┠❥ *${prefix}malkova*
-┠❥ *${prefix}canal*
-┠❥ *${prefix}nsfwloli1*
-┠❥ *${prefix}reislin*
-┠❥
-┠❥ ══  ❥ 〘 INTELIGÊNCIA 〙❥ ══
-┠❥
-┠❥ *${prefix}simih 1 (para ativar)*
-┠❥ *${prefix}simih 0 (para desativar)*
-┠❥ *${prefix}simi (sua mensagem)*
-┠❥
-┠❥ ══  ❥〘 EM PRODUÇÃO 〙❥ ══
-┠❥
-┠❥ *${prefix}gado*
-┠❥ *${prefix}dbz*
-┠❥ *${prefix}gtts loli*
-┠❥ *${prefix}hidegp*
-┠❥ *${prefix}grupos
-┠❥ *${prefix}antinazismo
-┠❥ *${prefix}it 1/0
-┠❥
-┠❥ ══  ❥〘 SÓ PREMIUM 〙 ❥ ══
-┠❥
-┠❥ *${prefix}dado*
-┠❥ *${prefix}cekvip*
-┠❥ *${prefix}premiumlist*
-┠❥ *${prefix}delete*
-┠❥ *${prefix}modapk*
-┠❥ *${prefix}indo10*
-┠❥*${prefix}daftarvip [para virar Premium]*
-┠❥ *${prefix}qrcode*
-┠❥ *${prefix}chentai*
-┠❥ *${prefix}gcpf*
-┠❥ *${prefix}gbin*
-┠❥ *${prefix}pack*
-┠❥ *${prefix}destrava*
-┠❥ *${prefix}gpessoa*
-┠❥
-┠❥ ══ ❥〘 GRUPO 〙 ❥  ══
-┠❥
-┠❥ *${prefix}promover*
-┠❥ *${prefix}setfoto [na legenda]*
-┠❥ *${prefix}setname [texto]*
-┠❥ *${prefix}rebaixar*
-┠❥ *${prefix}admins*
-┠❥ *${prefix}marcar*
-┠❥ *${prefix}marcar2*
-┠❥ *${prefix}bemvindo [1/0]*
-┠❥ *${prefix}grupoinfo*
-┠❥ *${prefix}boatarde*
-┠❥ *${prefix}boanoite*
-┠❥ *${prefix}setdesc*
-┠❥ *${prefix}bug [sua mensagem]*
-┠❥
-┠❥ ══ ❥〘 ESPECIFICO DO BOT 〙❥ ══
-┠❥
-┠❥ *${prefix}bug [sua mensagem]*
-┠❥ *${prefix}clonar [@]*
-┠❥ *${prefix}dono*
-┠❥ *${prefix}ping [ver velocidade do bot]*
-┠❥ *${prefix}termux*
-┠❥ *${prefix}gay [@]*
-┠❥ *${prefix}wame*
-┠❥ *${prefix}map (nome)*
-┠❥ *${prefix}setppbot (marque uma img)*
-┠❥ *${prefix}pinterest (nome)*
-┠❥ *${prefix}desligar (so para o dono)*
-┠❥ *${prefix}timer*
+┏━━━━━━━━━━━━
+┣ ⚜️ | Prefix: 「 ${prefix} 」
+┣ ⚜️ | Status: Online
+┣ ⚜️ | By: Causs
+┗━━━━━━━━━━━━
 
-┠❥ ══ ❥〘 MAIS ALGUNS 〙❥ ══
-┠❥
-┠❥ *${prefix}neko*
-┠❥ *${prefix}ttp [texto]*
-┠❥ *${prefix}testime*
-┠❥ *${prefix}tomp3*
-┠❥ *${prefix}modoanime [on/off]*
-┠❥ *${prefix}modonsfw [on/off]*
-┠❥ *${prefix}happymod [jogo/app]*
-┠❥ *${prefix}rize*
-┠❥ *${prefix}ytsearch*
-┠❥ *${prefix}moddroid [jogo/app]*
-┠❥ *${prefix}darkjokes (memes aleatórios)*
-┠❥ *${prefix}animecry*
-┠❥ *${prefix}gay1*
-┠❥ *${prefix}next*
-┠❥ *${prefix}alerta*
-┠❥ *${prefix}belle [img aleatórias]*
-┠❥ *${prefix}pronomeneu [texto]*
-┠❥ *${prefix}hobby*
-┠❥ *${prefix}kiss
-┠❥ *${prefix}analise
-┠❥
-┠❥ ══ ❥〘 COMANDOS DE VOZ 〙❥ ══
-┠❥
-┠❥ *${prefix}ola*
-┠❥ *${prefix}bv*
-┠❥ *${prefix}tchau*
-┠❥ *${prefix}bem*
-┠❥ *${prefix}a*
-┠❥ *${prefix}fdp*
-┠❥ *${prefix}onich*
-┠❥ *${prefix}beat1*
-┠❥ *${prefix}glub*
-┠❥ *${prefix}causs*
-┠❥
-┠❥ ══ ❥〘 OUTROS /2 〙❥ ══
+┏━━「 User」 ━━━
+┣ ⚜️ | nome: ${pushname}
+┣ ⚜️ | Limite: 9999999
+┣ ⚜️ | total: (não definido) 
+┣ ⚜️ | Registro: nop
+┗━━━━━━━━━━━━
 
-┠❥ *${prefix}brainly [pergunta]*
-┠❥ *${prefix}antiracismo [on/off]*
-┠❥ *${prefix}setnomebot*
-┠❥ *${prefix}meme*
-┠❥
-┠❥ ══ ❥〘 INTERATIVOS 〙❥ ══
-┠❥
-┠❥ ══ ❥〘  NOTA » 〙❥ ══
-┠❥ Mandar a msg sem o prefixo
-┠❥ ════════════════════
-┠❥
-┠❥ *bah*
-┠❥ *oii*
-┠❥ *bv*
-┠❥ *canta ai bot*
-┠❥ *grita*
-┠❥ *causs*
-┠❥ *gemidao*
-┠❥ *musica*
-┠❥
-┠❥ ══ ❥〘 LUUCK NO CONTROLE 〙❥ ══
-┠❥
-┠❥ *NOME: Luuck*
-┠❥
-┠❥ *WPP: wa.me/+12093913386*
-┠❥ 
-     CREDITOS 👇
-┠❥
-┠❥  *"base do (DARK BOT 4.0) ❥🚩*
-┠❥  *"kiba não xereka"*
-┠❥  *Número do dark: wa.me/+5522996215481
-┠❥
-┠❥ ═〘 LUUCK BOT 〙`
+┌─────────❶.❷────────
+║
+╠══〘 MENU 〙══
+║
+║🌕 */figu*
+║🌕 */toimg*
+║🌕 */caussmeme*
+║🌕 */memeindo*
+║🌕 */tts*
+║🌕 */lolih [on]*
+║🌕 */nsfwloli [off]*
+║🌕 */url2img*
+║🌕 */leens [na legenda]*
+║🌕 */wait [na legenda]*
+║🌕 */setprefix*
+║🌕 */linkgp*
+║🌕 */simih [1/0]*
+║🌕 */marcar*
+║🌕 */add [@]*
+║🌕 */banir [@]*
+║🌕 */promover [@]*
+║🌕 */rebaixar*
+║🌕 */admins*
+║🌕 */marcar2*
+║🌕 */bc [texto]* (ele faz uma ™)
+║🌕 */marcar3*
+║🌕 */bloqueados*
+║🌕 */bloquear [@]*
+║🌕 */desbloquear [@]*
+║🌕 */limpar*
+║🌕 */bc [ *texto* ]*
+║🌕 */bemvindo [1/0]*
+║🌕 */clonar [@]*
+║🌕 */help1*
+║🌕 */dono*
+║🌕 */owner*
+║🌕 */tts [texto]*
+║🌕 */setnome*
+║🌕 */termux*
+║🌕 */setfoto*
+║🌕 */grupoinfo*
+║🌕 */ytmp4*
+║🌕 */bomdia*
+║🌕 */boanoite*
+║🌕 */marcar*
+║🌕 */marcar2*
+║🌕 */marcar3*
+║🌕 */hidetag
+║🌕 */hidetag2
+║🌕 */gostosa 
+║🌕 */top5viado
+║
+╠══〘 GRUPO 〙══
+║
+║🌕 */banir*
+║🌕 */leveling [on/off]*
+║🌕 */level*
+║🌕 */add*
+║🌕 */promover*
+║🌕 */setfoto [na legenda]*
+║🌕 */setname [texto]*
+║🌕 */rebaixar*
+║🌕 */admins*
+║🌕 */marcar*
+║🌕 */marcar2*
+║🌕 */marcar3*
+║🌕 */bemvindo [1/0]*
+║🌕 */grupoinfo*
+║🌕 */bomdia*
+║🌕 */boatarde*
+║🌕 */boanoite*
+║🌕 */setdesc*
+║🌕 */bug [sua mensagem]*
+║
+╠══〘 ESPECIFICO DO BOT 〙══
+║
+║🌕 */bug [sua mensagem]*
+║🌕 */clonar [@]*
+║🌕 */dono*
+║🌕 */ping [ver velocidade do bot]*
+║🌕 */termux*
+║🌕 */gay [@]*
+║🌕 */wame*
+║🌕 */map (nome)*
+║🌕 */setppbot (marque uma img)*
+║🌕 */pinterest (nome)*
+║🌕 */desligar (so para o dono)*
+║🌕 */timer*
+║
+╠══〘 MAIS ALGUNS 〙══
+║
+║🌕 */neko*
+║🌕 */ttp [texto]*
+║🌕 */testime*
+║🌕 */tomp3*
+║🌕 */modoanime [on/off]*
+║🌕 */modonsfw [on/off]*
+║🌕 */happymod [jogo/app]*
+║🌕 */rize*
+║🌕 */ytsearch*
+║🌕 */moddroid [jogo/app]*
+║🌕 */xvideos [titulo]**
+║🌕 */nomegp*
+║🌕 */darkjokes (memes aleatórios)*
+║🌕 */animecry*
+║🌕 */gay1*
+║🌕 */next*
+║🌕 */alerta*
+║🌕 */belle [img aleatórias]*
+║🌕 */pronomeneu [texto]*
+║🌕 */hobby*
+║🌕 */kiss*
+║🌕 */analise*
+║
+╠══〘 IMAGENS 〙══
+║
+║🌕 */loli* [off]
+║🌕 */loli1*
+║🌕 */hentai*
+║🌕 */dono*
+║🌕 */porno*
+║🌕 */boanoite*
+║🌕 */bomdia*
+║🌕 */boatarde*
+║🌕 */mia [aleatórias]*
+║🌕 */rize [aleatórias]*
+║🌕 */minato [aleatórias]*
+║🌕 */boruto [aleatórias]*
+║🌕 */hinata [aleatórias]*
+║🌕 */sasuke [aleatórias]*
+║🌕 */sakura [aleatórias]*
+║🌕 */naruto [aleatórias]*
+║🌕 */meme*   
+║🌕 */lofi*
+║🌕 */malkova*
+║🌕 */canal*
+║🌕 */nsfwloli1*
+║🌕 */reislin*
+║🌕 */games*
+║🌕 */gta*
+║🌕 */fornay*
+║🌕 */lol*
+║🌕 */csgo*
+║
+╠══〘 MÚSICA 〙══
+║
+║🌕 */dbz*
+║🌕 */pato*
+║🌕 */tropa*
+║🌕 */trap*
+║🌕 */trap1*
+║🌕 */trap2*
+║🌕 */trap3*
+║🌕 */trap4*
+║🌕 */trap5*
+║🌕 */trap6*
+║🌕 */trap7*
+║🌕 */trap8*
+║🌕 */trap9*
+║🌕 */trap10*
+║🌕 */trap11*
+║🌕 */trap12*
+║🌕 */trap13*
+║🌕 */trap14*
+║🌕 */trap15*
+║🌕 */trap16*
+║🌕 */trap17*
+║🌕 */trap18*
+║🌕 */trap19*
+║🌕 */trap20*
+║🌕 */trap21*
+║🌕 */trap22*
+║🌕 */trap23*
+║🌕 */trap24*
+║🌕 */trap25*
+║🌕 */roc*
+║🌕 */roc1*
+║🌕 */roc2*
+║🌕 */roc3*
+║🌕 */roc4*
+║🌕 */roc5*
+║🌕 */roc6*
+║🌕 */roc7*
+║🌕 */roc8*
+║🌕 */roc9*
+║🌕 */roc10*
+║🌕 */roc11*
+║🌕 */roc12*
+║🌕 */roc13*
+║🌕 */roc14*
+║🌕 */roc15*
+║🌕 */roc16*
+║🌕 */roc17*
+║🌕 */roc18*
+║🌕 */roc19*
+║🌕 */roc20*
+║🌕 */roc21*
+║🌕 */roc22*
+║🌕 */roc23*
+║🌕 */roc24*
+║🌕 */roc25*
+║🌕 */ola*
+║🌕 */bv*
+║🌕 */tchau*
+║🌕 */bem*
+║🌕 */a*
+║🌕 */fdp*
+║🌕 */onich*
+║🌕 */beat1*
+║🌕 */glub*
+║🌕 */causs*
+║
+╠══〘 LOGO 〙══
+║
+║🌕 */smoke*
+║🌕 */cemiterio*
+║🌕 */wblack*
+║🌕 */chrome*
+║🌕 */naruto*
+║🌕 */shadow*
+║🌕 */glitch*
+║🌕 */pubglogo*
+║🌕 */bfild*
+║🌕 */coffee*
+║🌕 */coffe2*
+║🌕 */neon*
+║🌕 */summer*
+║🌕 */flower*
+║🌕 */bcover*
+║🌕 */dado3d*
+║🌕 */vintage*
+║🌕 */glowing*
+║🌕 */camuflagem*
+║🌕 */rainbow*
+║🌕 */honey*
+║🌕 */oceano*
+║🌕 */wolflogo*
+║🌕 */puff*
+║🌕 */flaming*
+║
+╠══〘 OUTROS /2 〙══
+║
+║🌕 */antilink [1/0]*
+║🌕 */brainly [pergunta]*
+║🌕 */antiracismo [on/off]*
+║🌕 */setnomebot*
+║🌕 */meme*
+║
+╠══〘 INTERATIVOS 〙══
+║
+╠══NOTA »
+║Mandar a msg sem o prefixo
+╠════════════════════
+║
+║🌕 *bah*
+║🌕 *oii*
+║🌕 *bv*
+║🌕 *canta ai bot*
+║🌕 *grita*
+║🌕 *causs*
+║🌕 *gemidao*
+║🌕 *musica*
+║🌕 *fds*
+║🌕 *Matheus*
+║
+╠══〘 CAUSS NO CONTROLE 〙══
+║
+║ *NOME: CAUSS*
+║ *INSTA: animexx_png*
+║ *WPP: wa.me/+5547992091566*
+║ *YOUTUBE: https://youtube.com/c/caussZ*
+║
+║  *"causs no controle🌕🚩"*
+║  *"kiba não xereka"*
+║  
+║
+╚═〘 CAUSS BOT 〙`
 }
-
 exports.help = help
-
